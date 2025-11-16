@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Home, BookOpen, Briefcase, Code, Sun, Moon } from "lucide-react";
+import { Home, BookOpen, Briefcase, Trophy, Code, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { id: "home", icon: Home, label: "Home" },
   { id: "education", icon: BookOpen, label: "Education" },
   { id: "experience", icon: Briefcase, label: "Experience" },
+  { id: "extracurricular", icon: Trophy, label: "Extracurricular" },
   { id: "projects", icon: Code, label: "Projects" },
 ];
 
