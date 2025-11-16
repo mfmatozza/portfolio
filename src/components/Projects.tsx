@@ -1,28 +1,28 @@
 export const Projects = () => {
   const projects = [
     {
-      title: "Project Alpha",
+      title: "[Project Name 1]",
       description:
-        "A modern web application built with cutting-edge technologies, focusing on user experience and performance optimization.",
-      tags: ["React", "TypeScript", "Tailwind"],
+        "[Brief description of the project, its purpose, key features, and the problem it solves]",
+      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
     },
     {
-      title: "Design System",
+      title: "[Project Name 2]",
       description:
-        "Comprehensive component library and design guidelines for building consistent, accessible interfaces at scale.",
-      tags: ["UI/UX", "Components", "Documentation"],
+        "[Description highlighting the project's unique aspects and your role in its development]",
+      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
     },
     {
-      title: "Creative Experiments",
+      title: "[Project Name 3]",
       description:
-        "Collection of interactive prototypes and visual experiments exploring the boundaries of web technologies.",
-      tags: ["WebGL", "Animation", "Interactive"],
+        "[Overview of the project's goals, implementation, and impact or results achieved]",
+      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
     },
     {
-      title: "Open Source Tool",
+      title: "[Project Name 4]",
       description:
-        "Developer tool that simplifies complex workflows and improves productivity for modern development teams.",
-      tags: ["CLI", "Node.js", "Open Source"],
+        "[Summary of the project including technical challenges overcome and lessons learned]",
+      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
     },
   ];
 
