@@ -2,11 +2,19 @@ export const Experience = () => {
   const experience = [
     {
       icon: "💼",
-      company: "theHackLab",
-      position: "President",
-      period: "Jun 2025 - Present",
+      company: "[Company/Organization Name]",
+      position: "[Your Position/Role]",
+      period: "[Start Date] - [End Date/Present]",
       description:
-        "Co-organized a semester-long hackathon for 70+ students and secured sponsorships from industry leaders like BCG X",
+        "[Brief description of your responsibilities, achievements, and impact in this role]",
+    },
+    {
+      icon: "💼",
+      company: "[Previous Company Name]",
+      position: "[Previous Position]",
+      period: "[Start Date] - [End Date]",
+      description:
+        "[Description of your work, key accomplishments, and skills developed]",
     },
   ];
 

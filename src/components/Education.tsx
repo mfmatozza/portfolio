@@ -2,19 +2,19 @@ export const Education = () => {
   const education = [
     {
       icon: "🎓",
-      institution: "Bocconi University",
-      degree: "BSc in Economics, Management and Computer Science",
-      period: "2024 - 2027",
+      institution: "[University Name]",
+      degree: "[Degree Name and Major]",
+      period: "[Start Year] - [End Year]",
       details:
-        "Relevant topics: Data Structures, Algorithms, Graph Theory, Statistics, Calculus, Accounting. GPA: 29.6/30",
+        "[Relevant coursework, achievements, GPA, honors, or notable activities during your time here]",
     },
     {
       icon: "📚",
-      institution: "Liceo Scientifico Statale Augusto Righi",
-      degree: "Scientific High School",
-      period: "2019 - 2024",
+      institution: "[High School/Previous Institution Name]",
+      degree: "[Diploma/Degree Name]",
+      period: "[Start Year] - [End Year]",
       details:
-        "Graduated from one of the top high schools in Italy. Participated in national Mathematics Olympiads. Was on the beach volley and football team.",
+        "[Notable achievements, extracurricular activities, awards, or relevant experiences]",
     },
   ];
 
