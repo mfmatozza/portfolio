@@ -22,16 +22,6 @@ export const Hero = () => {
             <span>Email</span>
           </a>
           <a
-            href="https://twitter.com/[yourusername]"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-            aria-label="Twitter"
-          >
-            <Twitter className="w-5 h-5" />
-            <span>Twitter</span>
-          </a>
-          <a
             href="https://github.com/[yourusername]"
             target="_blank"
             rel="noopener noreferrer"
