@@ -1,7 +1,9 @@
+import { Terminal, Code } from "lucide-react";
+
 export const Experience = () => {
   const experience = [
     {
-      icon: "💼",
+      icon: Terminal,
       company: "[Company/Organization Name]",
       position: "[Your Position/Role]",
       period: "[Start Date] - [End Date/Present]",
@@ -9,7 +11,7 @@ export const Experience = () => {
         "[Brief description of your responsibilities, achievements, and impact in this role]",
     },
     {
-      icon: "💼",
+      icon: Code,
       company: "[Previous Company Name]",
       position: "[Previous Position]",
       period: "[Start Date] - [End Date]",
@@ -29,8 +31,8 @@ export const Experience = () => {
               className="relative pl-20 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="absolute left-0 top-0 w-14 h-14 bg-card rounded-full flex items-center justify-center text-2xl border border-border">
-                {exp.icon}
+              <div className="absolute left-0 top-0 w-14 h-14 bg-card rounded-full flex items-center justify-center border border-border">
+                <exp.icon className="w-6 h-6 text-primary" />
               </div>
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-2xl font-bold">{exp.company}</h3>
