@@ -1,7 +1,9 @@
+import { Cpu, Zap } from "lucide-react";
+
 export const ExtracurricularActivities = () => {
   const activities = [
     {
-      icon: "🎯",
+      icon: Cpu,
       activity: "[Activity/Club Name]",
       role: "[Your Role]",
       period: "[Start Date] - [End Date/Present]",
@@ -9,7 +11,7 @@ export const ExtracurricularActivities = () => {
         "[Description of the activity, your contributions, and what you accomplished or learned]",
     },
     {
-      icon: "🎯",
+      icon: Zap,
       activity: "[Another Activity Name]",
       role: "[Your Role]",
       period: "[Start Date] - [End Date]",
@@ -29,8 +31,8 @@ export const ExtracurricularActivities = () => {
               className="relative pl-20 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="absolute left-0 top-0 w-14 h-14 bg-card rounded-full flex items-center justify-center text-2xl border border-border">
-                {activity.icon}
+              <div className="absolute left-0 top-0 w-14 h-14 bg-card rounded-full flex items-center justify-center border border-border">
+                <activity.icon className="w-6 h-6 text-primary" />
               </div>
               {index !== activities.length - 1 && (
                 <div className="absolute left-7 top-14 bottom-0 w-px bg-border -mb-12" />
