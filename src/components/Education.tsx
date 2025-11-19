@@ -6,7 +6,8 @@ export const Education = () => {
       icon: GraduationCap,
       institution: "Bocconi University",
       location: "Milan, Italy",
-      degree: "Bachelor in Economics, Management and <bf>Computer Science</bf>",
+      degree: "Bachelor in Economics, Management and Computer Science",
+      highlight: "Computer Science",
       period: "2024 - 2027",
       details: "[Relevant coursework, achievements, GPA, honors, or notable activities during your time here]",
     },
@@ -37,7 +38,12 @@ export const Education = () => {
                 <h3 className="text-2xl font-bold">{edu.institution}</h3>
                 <span className="text-muted-foreground whitespace-nowrap ml-4">{edu.period}</span>
               </div>
-              <p className="text-primary font-medium mb-3">{edu.degree}</p>
+              <p className="text-sm text-muted-foreground mb-2">{edu.location}</p>
+              <p className="text-primary font-medium mb-3">
+                {edu.degree.split(edu.highlight || '___NOHIGHLIGHT___')[0]}
+                {edu.highlight && <span className="font-bold">{edu.highlight}</span>}
+                {edu.degree.split(edu.highlight || '___NOHIGHLIGHT___')[1]}
+              </p>
               <p className="text-muted-foreground leading-relaxed">{edu.details}</p>
             </div>
           ))}
