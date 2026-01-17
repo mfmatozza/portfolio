@@ -20,39 +20,39 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-[70vh] flex items-center justify-center px-6 py-20">
-      <div className="max-w-4xl w-full">
-        <div className="mb-6 animate-fade-in">
-          <span className="text-primary text-lg">~/portfolio $</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-2">
+    <section id="home" className="min-h-[60vh] flex items-center justify-center px-6 py-16">
+      <div className="max-w-3xl w-full">
+        <div className="mb-4 animate-fade-in">
+          <span className="text-primary text-xs">~/portfolio $</span>
+          <h1 className="text-3xl md:text-4xl font-bold mt-1">
             {displayText}
             <span className="animate-pulse text-primary">_</span>
           </h1>
         </div>
         <p
-          className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl leading-relaxed animate-fade-in"
+          className="text-sm text-muted-foreground mb-6 max-w-2xl leading-relaxed animate-fade-in"
           style={{ animationDelay: "0.1s" }}
         >
           [Brief introduction about yourself, your skills, and what you do. This is a great place to showcase your
           personality and professional interests.]
         </p>
-        <div className="flex gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <div className="flex gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <a
             href="mailto:mf.matozza@gmail.com"
-            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-sm"
+            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-xs"
             aria-label="Email"
           >
-            <Mail className="w-4 h-4" />
+            <Mail className="w-3.5 h-3.5" />
             <span>Email</span>
           </a>
           <a
             href="https://linkedin.com/in/[yourusername]"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-sm"
+            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-xs"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-4 h-4" />
+            <Linkedin className="w-3.5 h-3.5" />
             <span>LinkedIn</span>
           </a>
         </div>
