@@ -64,7 +64,7 @@ export const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="experience" className="flex items-center justify-center px-6 py-20">
       <div className="max-w-4xl w-full">
         <h2 className="text-5xl font-bold mb-16">Experience</h2>
         <div className="space-y-12">
