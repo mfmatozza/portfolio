@@ -27,7 +27,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="projects" className="flex items-center justify-center px-6 py-20">
       <div className="max-w-4xl w-full">
         <h2 className="text-5xl font-bold mb-16">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
