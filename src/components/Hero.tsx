@@ -23,8 +23,8 @@ export const Hero = () => {
   return (
     <section id="home" className="flex items-center justify-center px-6 pt-16 pb-4">
       <div className="max-w-3xl w-full">
-        <div className="flex items-start justify-between gap-8">
-          <div className="flex-1">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1 max-w-md">
             <div className="mb-4 animate-fade-in">
               <span className="text-primary text-xs">~/portfolio $</span>
               <h1 className="text-3xl md:text-4xl font-bold mt-1">
