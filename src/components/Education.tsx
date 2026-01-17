@@ -22,7 +22,7 @@ export const Education = () => {
   ];
 
   return (
-    <section id="education" className="flex items-center justify-center px-6 py-16">
+    <section id="education" className="flex items-center justify-center px-6 py-10">
       <div className="max-w-3xl w-full">
         <h2 className="text-2xl font-bold mb-10">Education</h2>
         <div className="space-y-8">
