@@ -20,7 +20,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-[60vh] flex items-center justify-center px-6 py-16">
+    <section id="home" className="flex items-center justify-center px-6 pt-20 pb-8">
       <div className="max-w-3xl w-full">
         <div className="mb-4 animate-fade-in">
           <span className="text-primary text-xs">~/portfolio $</span>
