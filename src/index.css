@@ -82,7 +82,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-sm md:text-base;
   }
 
   html {
