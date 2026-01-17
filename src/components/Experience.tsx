@@ -64,28 +64,28 @@ export const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="flex items-center justify-center px-6 py-20">
-      <div className="max-w-4xl w-full">
-        <h2 className="text-5xl font-bold mb-16">Experience</h2>
-        <div className="space-y-12">
+    <section id="experience" className="flex items-center justify-center px-6 py-16">
+      <div className="max-w-3xl w-full">
+        <h2 className="text-2xl font-bold mb-10">Experience</h2>
+        <div className="space-y-8">
           {experience.map((exp, index) => (
             <div
               key={index}
-              className="relative pl-20 animate-fade-in"
+              className="relative pl-14 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="absolute left-0 top-0 w-14 h-14 bg-card rounded-full flex items-center justify-center border border-border">
-                <exp.icon className="w-6 h-6 text-primary" />
+              <div className="absolute left-0 top-0 w-10 h-10 bg-card rounded-full flex items-center justify-center border border-border">
+                <exp.icon className="w-4 h-4 text-primary" />
               </div>
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="text-2xl font-bold">{exp.company}</h3>
-                <span className="text-muted-foreground whitespace-nowrap ml-4">
+              <div className="flex justify-between items-start mb-1">
+                <h3 className="text-base font-bold">{exp.company}</h3>
+                <span className="text-xs text-muted-foreground whitespace-nowrap ml-4">
                   {exp.period}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground mb-2">{exp.location}</p>
-              <p className="text-primary font-medium mb-3">{exp.position}</p>
-              <ul className="text-muted-foreground leading-relaxed space-y-1">
+              <p className="text-xs text-muted-foreground mb-1">{exp.location}</p>
+              <p className="text-primary text-sm font-medium mb-2">{exp.position}</p>
+              <ul className="text-xs text-muted-foreground leading-relaxed space-y-1">
                 {exp.bullets.map((bullet, i) => (
                   <li key={i} className="flex items-start">
                     <span className="mr-2 text-primary">▸</span>

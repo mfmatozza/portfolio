@@ -27,25 +27,25 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="flex items-center justify-center px-6 py-20">
-      <div className="max-w-4xl w-full">
-        <h2 className="text-5xl font-bold mb-16">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section id="projects" className="flex items-center justify-center px-6 py-16">
+      <div className="max-w-3xl w-full">
+        <h2 className="text-2xl font-bold mb-10">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] animate-fade-in"
+              className="bg-card border border-border rounded-xl p-5 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <h3 className="text-base font-bold mb-2">{project.title}</h3>
+              <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
-                    className="px-4 py-1.5 bg-secondary rounded-full text-sm"
+                    className="px-2 py-1 bg-secondary rounded-full text-xs"
                   >
                     {tag}
                   </span>
