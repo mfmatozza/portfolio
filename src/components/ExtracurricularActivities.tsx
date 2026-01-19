@@ -4,19 +4,19 @@ export const ExtracurricularActivities = () => {
   const activities = [
     {
       icon: Cpu,
-      activity: "[Activity/Club Name]",
-      role: "[Your Role]",
-      period: "[Start Date] - [End Date/Present]",
+      activity: "Astra Bocconi",
+      role: "Head of Technology",
+      period: "Aug 2025 - Present",
       description:
-        "[Description of the activity, your contributions, and what you accomplished or learned]",
+        "Leading the technology division, overseeing technical projects and driving innovation within the organization.",
     },
     {
       icon: Zap,
-      activity: "[Another Activity Name]",
-      role: "[Your Role]",
-      period: "[Start Date] - [End Date]",
+      activity: "Astra Bocconi",
+      role: "Board Member",
+      period: "Oct 2024 - Aug 2025",
       description:
-        "[Details about your involvement, impact, and key experiences from this activity]",
+        "Contributed to strategic decisions and organizational growth as a founding board member.",
     },
   ];
 
