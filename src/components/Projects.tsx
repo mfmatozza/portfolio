@@ -7,7 +7,7 @@ export const Projects = () => {
       role: "Co-Founder",
       period: "Feb 2025 - Present",
       description:
-        "An internal marketplace built exclusively for Bocconi students. Buy, sell, and trade textbooks, notes, and essentials within a trusted university community.",
+        "An internal marketplace built exclusively for Bocconi students. Buy, sell, and trade anything within a trusted university community.",
       tags: ["Marketplace", "E-commerce", "Student Platform"],
       links: {
         website: "https://uni-market.it",
