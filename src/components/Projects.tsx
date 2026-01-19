@@ -1,27 +1,33 @@
+import { ExternalLink, Linkedin } from "lucide-react";
+
 export const Projects = () => {
   const projects = [
     {
-      title: "[Project Name 1]",
+      title: "UniMarket",
+      role: "Co-Founder",
+      period: "Feb 2025 - Present",
       description:
-        "[Brief description of the project, its purpose, key features, and the problem it solves]",
-      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
+        "An internal marketplace built exclusively for Bocconi students. Buy, sell, and trade textbooks, notes, and essentials within a trusted university community.",
+      tags: ["Marketplace", "E-commerce", "Student Platform"],
+      links: {
+        website: "https://uni-market.it",
+        linkedin: "https://www.linkedin.com/company/unimarket-it/",
+      },
     },
     {
       title: "[Project Name 2]",
+      role: "[Your Role]",
+      period: "[Date]",
       description:
         "[Description highlighting the project's unique aspects and your role in its development]",
       tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
     },
     {
       title: "[Project Name 3]",
+      role: "[Your Role]",
+      period: "[Date]",
       description:
         "[Overview of the project's goals, implementation, and impact or results achieved]",
-      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
-    },
-    {
-      title: "[Project Name 4]",
-      description:
-        "[Summary of the project including technical challenges overcome and lessons learned]",
       tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
     },
   ];
@@ -37,11 +43,17 @@ export const Projects = () => {
               className="bg-card border border-border rounded-xl p-5 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-base font-bold mb-2">{project.title}</h3>
+              <div className="flex justify-between items-start mb-1">
+                <h3 className="text-base font-bold">{project.title}</h3>
+                <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
+                  {project.period}
+                </span>
+              </div>
+              <p className="text-primary text-xs font-medium mb-2">{project.role}</p>
               <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 mb-3">
                 {project.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
@@ -51,6 +63,32 @@ export const Projects = () => {
                   </span>
                 ))}
               </div>
+              {project.links && (
+                <div className="flex gap-3 pt-2 border-t border-border">
+                  {project.links.website && (
+                    <a
+                      href={project.links.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>Website</span>
+                    </a>
+                  )}
+                  {project.links.linkedin && (
+                    <a
+                      href={project.links.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Linkedin className="w-3.5 h-3.5" />
+                      <span>LinkedIn</span>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
