@@ -12,9 +12,9 @@ const Index = () => {
       <FloatingNav />
       <Hero />
       <Education />
+      <Experience />
       <ExtracurricularActivities />
       <Projects />
-      <Experience />
       <Footer />
     </div>
   );
