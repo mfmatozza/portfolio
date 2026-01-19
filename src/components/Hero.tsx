@@ -49,7 +49,7 @@ export const Hero = () => {
                 <span>Email</span>
               </a>
               <a
-                href="https://linkedin.com/in/[yourusername]"
+                href="https://www.linkedin.com/in/michele-francesco-matozza-17964b266"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-xs"
