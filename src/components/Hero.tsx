@@ -36,7 +36,7 @@ export const Hero = () => {
               className="text-sm text-muted-foreground mb-6 max-w-md leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
-              I am a 19-year-old university student with a strong interest in technology, entrepreneurship, and innovation. I enjoy learning quickly, working in teams, and turning ideas into practical solutions. Alongside my academic path, I serve as a University Course Representative, where I contribute to improving the university experience.
+              I am a 20-year-old university student with a strong interest in technology, entrepreneurship, and innovation. I enjoy learning quickly, working in teams, and turning ideas into practical solutions. Alongside my academic path, I serve as a University Course Representative, where I contribute to improving the university experience.
             </p>
             <div className="flex gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <a
