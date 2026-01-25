@@ -29,7 +29,7 @@ export const ExtracurricularActivities = () => {
       roles: [
         {
           title: "Lovable Campus Leader",
-          period: "Jan 2025 - Present",
+          period: "",
           description:
             "Chosen as one of the Lovable Ambassadors to represent Lovable through events and partnerships.",
         },
