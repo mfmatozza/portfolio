@@ -9,7 +9,7 @@ export const Education = () => {
       degree: "Bachelor in Economics, Management and Computer Science",
       highlight: "Computer Science",
       period: "2024 - 2027",
-      details: "[Relevant coursework, achievements, GPA, honors, or notable activities during your time here]",
+      details: "Statistics 1: 31/30, Computer Science: 29/30, IT Law: 31/30, Course Representative",
     },
     {
       icon: BookOpen,
