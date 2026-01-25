@@ -15,12 +15,15 @@ export const Projects = () => {
       },
     },
     {
-      title: "[Project Name 2]",
-      role: "[Your Role]",
-      period: "[Date]",
+      title: "Sideris",
+      role: "Co-Founder & Developer",
+      period: "Work in Progress",
       description:
-        "[Description highlighting the project's unique aspects and your role in its development]",
-      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
+        "A marketplace between brands and creators that aims to enable barrier-less digital marketing. 3rd place at a semester-long hackathon.",
+      tags: ["Marketplace", "Digital Marketing", "Creator Economy"],
+      links: {
+        website: "https://sideris.app",
+      },
     },
     {
       title: "[Project Name 3]",
