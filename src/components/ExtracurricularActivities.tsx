@@ -1,4 +1,5 @@
 import { Rocket } from "lucide-react";
+import lovableLogo from "@/assets/lovable-logo.png";
 
 export const ExtracurricularActivities = () => {
   const organizations = [
@@ -21,6 +22,19 @@ export const ExtracurricularActivities = () => {
         },
       ],
     },
+    {
+      customIcon: lovableLogo,
+      name: "Lovable",
+      period: "Jan 2025 - Present",
+      roles: [
+        {
+          title: "Lovable Campus Leader",
+          period: "Jan 2025 - Present",
+          description:
+            "Chosen as one of the Lovable Ambassadors to represent Lovable through events and partnerships.",
+        },
+      ],
+    },
   ];
 
   return (
@@ -35,7 +49,11 @@ export const ExtracurricularActivities = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="absolute left-0 top-0 w-10 h-10 bg-card rounded-full flex items-center justify-center border border-border">
-                <org.icon className="w-4 h-4 text-primary" />
+                {org.customIcon ? (
+                  <img src={org.customIcon} alt={org.name} className="w-5 h-5 object-contain" />
+                ) : (
+                  org.icon && <org.icon className="w-4 h-4 text-primary" />
+                )}
               </div>
               <div className="flex justify-between items-start mb-1">
                 <h3 className="text-base font-bold">{org.name}</h3>
