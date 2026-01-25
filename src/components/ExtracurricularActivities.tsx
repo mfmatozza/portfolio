@@ -1,4 +1,4 @@
-import { Rocket, Code } from "lucide-react";
+import { Rocket, Code, ExternalLink } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.png";
 
 export const ExtracurricularActivities = () => {
@@ -13,6 +13,10 @@ export const ExtracurricularActivities = () => {
           period: "Aug 2025 - Present",
           description:
             "Leading the technology division, overseeing technical projects and driving innovation within the organization.",
+          links: [
+            { label: "Free at B", url: "https://freeatb.it" },
+            { label: "Website", url: "https://astrabocconi.com" },
+          ],
         },
         {
           title: "Board Member",
@@ -93,6 +97,22 @@ export const ExtracurricularActivities = () => {
                     <p className="text-xs text-muted-foreground leading-relaxed">
                       {role.description}
                     </p>
+                    {role.links && role.links.length > 0 && (
+                      <div className="flex gap-3 mt-2">
+                        {role.links.map((link, linkIndex) => (
+                          <a
+                            key={linkIndex}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            <span>{link.label}</span>
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
