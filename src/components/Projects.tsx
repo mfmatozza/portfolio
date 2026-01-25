@@ -41,7 +41,7 @@ export const Projects = () => {
       role: "Author",
       period: "June 2024",
       description:
-        "Extended essay exploring RSA and Elliptic Curve Cryptography, analyzing their mathematical foundations, vulnerabilities including quantum computing threats, and comparative security advantages.",
+        "Essay exploring RSA and Elliptic Curve Cryptography, analyzing their mathematical foundations, vulnerabilities including quantum computing threats, and comparative security advantages.",
       tags: ["Cryptography", "RSA", "ECC", "Mathematics"],
       links: {
         pdf: "/documents/public-key-encryption.pdf",
