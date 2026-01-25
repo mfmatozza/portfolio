@@ -1,4 +1,4 @@
-import { Rocket } from "lucide-react";
+import { Rocket, Code } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.png";
 
 export const ExtracurricularActivities = () => {
@@ -32,6 +32,25 @@ export const ExtracurricularActivities = () => {
           period: "",
           description:
             "Chosen as one of the Lovable Ambassadors to represent Lovable through events and partnerships.",
+        },
+      ],
+    },
+    {
+      icon: Code,
+      name: "Hacklab",
+      period: "Oct 2024 - Present",
+      roles: [
+        {
+          title: "President",
+          period: "Jan 2025 - Present",
+          description:
+            "Leading the organization and driving hackathon culture within the university community.",
+        },
+        {
+          title: "Hackathon Participant",
+          period: "Oct 2024 - Dec 2025",
+          description:
+            "3x Hackathon participant, 1x first place, 1x third place.",
         },
       ],
     },
