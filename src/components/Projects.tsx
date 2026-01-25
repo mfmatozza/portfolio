@@ -1,4 +1,4 @@
-import { ExternalLink, Linkedin } from "lucide-react";
+import { ExternalLink, Linkedin, FileText } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
@@ -26,12 +26,15 @@ export const Projects = () => {
       },
     },
     {
-      title: "[Project Name 3]",
-      role: "[Your Role]",
-      period: "[Date]",
+      title: "MCMC Sampling for a 2D Ising Model",
+      role: "Developer",
+      period: "November 2025",
       description:
-        "[Overview of the project's goals, implementation, and impact or results achieved]",
-      tags: ["[Technology 1]", "[Technology 2]", "[Technology 3]"],
+        "Implementation of a Markov Chain Monte Carlo sampler for the 2D Ising model, featuring Metropolis algorithm optimization, cluster detection via BFS, and analysis of phase transitions at critical temperature.",
+      tags: ["Python", "MCMC", "Computational Physics"],
+      links: {
+        pdf: "/documents/mcmc-ising-model.pdf",
+      },
     },
   ];
 
@@ -88,6 +91,17 @@ export const Projects = () => {
                     >
                       <Linkedin className="w-3.5 h-3.5" />
                       <span>LinkedIn</span>
+                    </a>
+                  )}
+                  {project.links.pdf && (
+                    <a
+                      href={project.links.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <FileText className="w-3.5 h-3.5" />
+                      <span>View PDF</span>
                     </a>
                   )}
                 </div>
