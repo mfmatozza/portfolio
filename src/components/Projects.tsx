@@ -24,6 +24,11 @@ export const Projects = () => {
       links: {
         website: "https://sideris.app",
       },
+      collaborator: {
+        name: "Riccardo Mazzarini",
+        url: "https://heyimrick.com",
+      },
+      dofollow: true,
     },
     {
       title: "MCMC Sampling for a 2D Ising Model",
@@ -80,13 +85,26 @@ export const Projects = () => {
                   </span>
                 ))}
               </div>
+              {"collaborator" in project && project.collaborator && (
+                <p className="text-xs text-muted-foreground mb-3">
+                  Developed with{" "}
+                  <a
+                    href={project.collaborator.url}
+                    target="_blank"
+                    rel="dofollow"
+                    className="text-primary hover:underline"
+                  >
+                    {project.collaborator.name}
+                  </a>
+                </p>
+              )}
               {project.links && (
                 <div className="flex gap-3 pt-2 border-t border-border">
                   {project.links.website && (
                     <a
                       href={project.links.website}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel={"dofollow" in project && project.dofollow ? "dofollow" : "noopener noreferrer"}
                       className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
