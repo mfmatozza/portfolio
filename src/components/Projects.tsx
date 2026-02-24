@@ -40,6 +40,12 @@ export const Projects = () => {
       links: {
         pdf: "/documents/mcmc-ising-model.pdf",
       },
+      collaborator: {
+        name: "Luca Pirini",
+        url: "https://piriniluca.com",
+        label: "HM",
+      },
+      dofollow: true,
     },
     {
       title: "Brief Overview of Public-Key Encryption Systems",
@@ -87,11 +93,11 @@ export const Projects = () => {
               </div>
               {"collaborator" in project && project.collaborator && (
                 <p className="text-xs text-muted-foreground mb-3">
-                  Developed with{" "}
+                  {project.collaborator.label ? `${project.collaborator.label}: ` : "Developed with "}
                   <a
                     href={project.collaborator.url}
                     target="_blank"
-                    rel="dofollow"
+                    rel={"dofollow" in project && project.dofollow ? "dofollow" : "noopener noreferrer"}
                     className="text-primary hover:underline"
                   >
                     {project.collaborator.name}
