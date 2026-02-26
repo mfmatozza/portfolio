@@ -3,6 +3,19 @@ import { ExternalLink, Linkedin, FileText, Github } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
+      title: "LinkeClean",
+      role: "Developer",
+      period: "February 2026",
+      description:
+        "A Chrome extension that allows you to filter out all the noise from your LinkedIn feed so you can focus on posts that actually matter.",
+      tags: ["JavaScript", "HTML", "Chrome Extension"],
+      links: {
+        website: "https://linkeclean.site",
+        github: "https://github.com/mfmatozza/LinkeClean",
+      },
+      dofollow: true,
+    },
+    {
       title: "UniMarket",
       role: "Co-Founder",
       period: "Feb 2025 - Present",
@@ -27,19 +40,6 @@ export const Projects = () => {
       collaborator: {
         name: "Riccardo Mazzarini",
         url: "https://heyimrick.com",
-      },
-      dofollow: true,
-    },
-    {
-      title: "LinkeClean",
-      role: "Developer",
-      period: "2025",
-      description:
-        "A Chrome extension that allows you to filter out all the noise from your LinkedIn feed so you can focus on posts that actually matter.",
-      tags: ["JavaScript", "HTML", "Chrome Extension"],
-      links: {
-        website: "https://linkeclean.site",
-        github: "https://github.com/mfmatozza/LinkeClean",
       },
       dofollow: true,
     },
