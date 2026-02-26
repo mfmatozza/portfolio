@@ -1,5 +1,6 @@
 import { ExternalLink, ArrowUp } from "lucide-react";
 import hacklabLogo from "@/assets/hacklab-logo.png";
+import hfarmLogo from "@/assets/hfarm-logo.png";
 
 export const Hackathons = () => {
   const hackathons = [
@@ -18,6 +19,17 @@ export const Hackathons = () => {
           result: "1st Place",
           project: "UniMarket",
           projectUrl: "https://uni-market.it",
+        },
+      ],
+    },
+    {
+      competition: "H-Farm Hackathon",
+      logo: hfarmLogo,
+      editions: [
+        {
+          period: "2025",
+          result: "1st Place",
+          description: "Ideating a ML algorithm to predict mistakes done by students in entrance exams",
         },
       ],
     },
@@ -49,22 +61,28 @@ export const Hackathons = () => {
                   >
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
                       <span className={`font-bold ${edition.result === "1st Place" ? "text-yellow-500" : edition.result === "3rd Place" ? "text-amber-700" : "text-primary"}`}>{edition.result}</span>
-                      <span className="text-muted-foreground">developing</span>
-                      <a
-                        href={edition.projectUrl}
-                        target="_blank"
-                        rel="dofollow"
-                        className="font-medium text-foreground hover:text-primary transition-colors"
-                      >
-                        {edition.project}
-                      </a>
-                      <a
-                        href="#projects"
-                        className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <ArrowUp className="w-3 h-3" />
-                        <span>see above</span>
-                      </a>
+                      {"project" in edition && edition.project ? (
+                        <>
+                          <span className="text-muted-foreground">developing</span>
+                          <a
+                            href={edition.projectUrl}
+                            target="_blank"
+                            rel="dofollow"
+                            className="font-medium text-foreground hover:text-primary transition-colors"
+                          >
+                            {edition.project}
+                          </a>
+                          <a
+                            href="#projects"
+                            className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            <ArrowUp className="w-3 h-3" />
+                            <span>see above</span>
+                          </a>
+                        </>
+                      ) : (
+                        <span className="text-muted-foreground">{"description" in edition && edition.description}</span>
+                      )}
                     </div>
                     <span className="text-xs text-muted-foreground whitespace-nowrap">
                       {edition.period}
