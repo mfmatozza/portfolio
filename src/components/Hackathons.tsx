@@ -48,7 +48,7 @@ export const Hackathons = () => {
                     className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 pl-4 border-l-2 border-primary/30"
                   >
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
-                      <span className="font-bold text-primary">{edition.result}</span>
+                      <span className={`font-bold ${edition.result === "1st Place" ? "text-yellow-500" : edition.result === "3rd Place" ? "text-amber-700" : "text-primary"}`}>{edition.result}</span>
                       <span className="text-muted-foreground">developing</span>
                       <a
                         href={edition.projectUrl}
