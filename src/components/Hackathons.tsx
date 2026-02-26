@@ -6,6 +6,7 @@ export const Hackathons = () => {
   const hackathons = [
     {
       competition: "theHacklab Startup Competition",
+      location: "Milan, Italy",
       logo: hacklabLogo,
       editions: [
         {
@@ -24,6 +25,7 @@ export const Hackathons = () => {
     },
     {
       competition: "H-Farm Hackathon",
+      location: "Milan, Italy",
       logo: hfarmLogo,
       editions: [
         {
@@ -51,7 +53,10 @@ export const Hackathons = () => {
                   alt={hackathon.competition}
                   className="w-12 h-12 rounded-lg object-contain bg-foreground/10 p-1"
                 />
-                <h3 className="text-base font-bold">{hackathon.competition}</h3>
+                <div>
+                  <h3 className="text-base font-bold">{hackathon.competition}</h3>
+                  <p className="text-xs text-muted-foreground">{hackathon.location}</p>
+                </div>
               </div>
               <div className="space-y-4">
                 {hackathon.editions.map((edition, i) => (
