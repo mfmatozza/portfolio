@@ -25,18 +25,6 @@ export const Hackathons = () => {
       ],
     },
     {
-      competition: "H-Farm Hackathon",
-      location: "Milan, Italy",
-      logo: hfarmLogo,
-      editions: [
-        {
-          period: "2025",
-          result: "1st Place",
-          description: "Ideating a ML algorithm to predict mistakes done by students in entrance exams",
-        },
-      ],
-    },
-    {
       competition: "HackEurope Dublin",
       location: "Dublin, Ireland",
       logo: hackeuropeLogo,
@@ -45,6 +33,18 @@ export const Hackathons = () => {
           period: "February 2026",
           result: "Participant",
           description: "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
+        },
+      ],
+    },
+    {
+      competition: "H-Farm Hackathon",
+      location: "Milan, Italy",
+      logo: hfarmLogo,
+      editions: [
+        {
+          period: "October 2024",
+          result: "1st Place",
+          description: "Ideating a ML algorithm to predict mistakes done by students in entrance exams",
         },
       ],
     },
@@ -64,7 +64,7 @@ export const Hackathons = () => {
                 <img
                   src={hackathon.logo}
                   alt={hackathon.competition}
-                  className="w-12 h-12 rounded-lg object-contain bg-foreground/10 p-1"
+                  className="w-12 h-12 rounded-lg object-contain object-center bg-foreground/10 p-1"
                 />
                 <div>
                   <h3 className="text-base font-bold">{hackathon.competition}</h3>
