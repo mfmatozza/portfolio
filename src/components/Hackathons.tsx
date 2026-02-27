@@ -6,6 +6,18 @@ import hackeuropeLogo from "@/assets/hackeurope-logo.png";
 export const Hackathons = () => {
   const hackathons = [
     {
+      competition: "HackEurope Dublin",
+      location: "Dublin, Ireland",
+      logo: hackeuropeLogo,
+      editions: [
+        {
+          period: "February 2026",
+          result: "Participant",
+          description: "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
+        },
+      ],
+    },
+    {
       competition: "theHacklab Startup Competition",
       location: "Milan, Italy",
       logo: hacklabLogo,
@@ -21,18 +33,6 @@ export const Hackathons = () => {
           result: "1st Place",
           project: "UniMarket",
           projectUrl: "https://uni-market.it",
-        },
-      ],
-    },
-    {
-      competition: "HackEurope Dublin",
-      location: "Dublin, Ireland",
-      logo: hackeuropeLogo,
-      editions: [
-        {
-          period: "February 2026",
-          result: "Participant",
-          description: "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
         },
       ],
     },
