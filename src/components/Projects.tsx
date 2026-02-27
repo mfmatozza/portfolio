@@ -3,6 +3,20 @@ import { ExternalLink, Linkedin, FileText, Github, Trophy } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
+      title: "WindSite",
+      role: "Co-Founder & Developer",
+      period: "February 2026",
+      description:
+        "An AI-powered pre-permit feasibility assessment for offshore wind energy projects. Draw zones, configure constraints, run simulations, and generate reports, all in one platform. Developed at HackEurope Dublin 2026.",
+      tags: ["Agentic AI", "ReactFlow.js", "RLMs"],
+      links: {
+        website: "https://windsite.cloud",
+        github: "https://github.com/mfmatozza/WindSite",
+        devpost: "https://devpost.com/software/windsite",
+      },
+      dofollow: true,
+    },
+    {
       title: "LinkeClean",
       role: "Developer",
       period: "February 2026",
@@ -12,20 +26,6 @@ export const Projects = () => {
       links: {
         website: "https://linkeclean.site",
         github: "https://github.com/mfmatozza/LinkeClean",
-      },
-      dofollow: true,
-    },
-    {
-      title: "WindSite",
-      role: "Co-Founder & Developer",
-      period: "February 2026",
-      description:
-        "An AI-powered pre-permit feasibility assessment for offshore wind energy projects. Draw zones, configure constraints, run simulations, and generate reports, all in one platform. Developed at HackEurope Dublin 2026.",
-      tags: ["AI", "Wind Energy", "ReactFlow.js", "Simulations"],
-      links: {
-        website: "https://windsite.cloud",
-        github: "https://github.com/mfmatozza/WindSite",
-        devpost: "https://devpost.com/software/windsite",
       },
       dofollow: true,
     },
