@@ -1,6 +1,7 @@
 import { ExternalLink, ArrowUp } from "lucide-react";
 import hacklabLogo from "@/assets/hacklab-logo.png";
 import hfarmLogo from "@/assets/hfarm-logo.png";
+import hackeuropeLogo from "@/assets/hackeurope-logo.png";
 
 export const Hackathons = () => {
   const hackathons = [
@@ -32,6 +33,18 @@ export const Hackathons = () => {
           period: "2025",
           result: "1st Place",
           description: "Ideating a ML algorithm to predict mistakes done by students in entrance exams",
+        },
+      ],
+    },
+    {
+      competition: "HackEurope Dublin",
+      location: "Dublin, Ireland",
+      logo: hackeuropeLogo,
+      editions: [
+        {
+          period: "February 2026",
+          result: "Participant",
+          description: "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
         },
       ],
     },
