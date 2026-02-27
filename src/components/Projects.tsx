@@ -1,4 +1,4 @@
-import { ExternalLink, Linkedin, FileText, Github } from "lucide-react";
+import { ExternalLink, Linkedin, FileText, Github, Trophy } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
@@ -16,16 +16,18 @@ export const Projects = () => {
       dofollow: true,
     },
     {
-      title: "UniMarket",
-      role: "Co-Founder",
-      period: "Feb 2025 - Present",
+      title: "WindSite",
+      role: "Co-Founder & Developer",
+      period: "February 2026",
       description:
-        "An internal marketplace built exclusively for Bocconi students. Buy, sell, and trade anything within a trusted university community.",
-      tags: ["Marketplace", "E-commerce", "Student Platform"],
+        "An AI-powered pre-permit feasibility assessment for offshore wind energy projects. Draw zones, configure constraints, run simulations, and generate reports, all in one platform. Developed at HackEurope Dublin 2026.",
+      tags: ["AI", "Wind Energy", "ReactFlow.js", "Simulations"],
       links: {
-        website: "https://uni-market.it",
-        linkedin: "https://www.linkedin.com/company/unimarket-it/",
+        website: "https://windsite.cloud",
+        github: "https://github.com/mfmatozza/WindSite",
+        devpost: "https://devpost.com/software/windsite",
       },
+      dofollow: true,
     },
     {
       title: "Sideris",
@@ -42,6 +44,18 @@ export const Projects = () => {
         url: "https://heyimrick.com",
       },
       dofollow: true,
+    },
+    {
+      title: "UniMarket",
+      role: "Co-Founder",
+      period: "Feb 2025 - Present",
+      description:
+        "An internal marketplace built exclusively for Bocconi students. Buy, sell, and trade anything within a trusted university community.",
+      tags: ["Marketplace", "E-commerce", "Student Platform"],
+      links: {
+        website: "https://uni-market.it",
+        linkedin: "https://www.linkedin.com/company/unimarket-it/",
+      },
     },
     {
       title: "MCMC Sampling for a 2D Ising Model",
@@ -161,6 +175,17 @@ export const Projects = () => {
                     >
                       <Github className="w-3.5 h-3.5" />
                       <span>GitHub</span>
+                    </a>
+                  )}
+                  {"devpost" in project.links && project.links.devpost && (
+                    <a
+                      href={project.links.devpost}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Trophy className="w-3.5 h-3.5" />
+                      <span>DevPost</span>
                     </a>
                   )}
                 </div>
