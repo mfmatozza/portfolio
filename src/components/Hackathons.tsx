@@ -13,6 +13,8 @@ export const Hackathons = () => {
         {
           period: "February 2026",
           result: "Participant",
+          project: "WindSite",
+          projectUrl: "https://windsite.cloud",
           description: "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
         },
       ],
