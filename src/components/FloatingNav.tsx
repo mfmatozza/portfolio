@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Home, BookOpen, Briefcase, Code, Sun, Moon } from "lucide-react";
+import { Home, BookOpen, Briefcase, Code, Sun, Moon, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ExtracurricularIcon = () => (
@@ -14,6 +14,7 @@ const navItems = [
   { id: "experience", icon: Briefcase, label: "Experience" },
   { id: "extracurricular", icon: ExtracurricularIcon, label: "Extracurricular" },
   { id: "projects", icon: Code, label: "Projects" },
+  { id: "hackathons", icon: Trophy, label: "Hackathons" },
 ];
 
 export const FloatingNav = () => {
