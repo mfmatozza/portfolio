@@ -14,8 +14,8 @@ export const Hackathons = () => {
         {
           period: "March 2026",
           result: "Participant",
-          project: "Sideris",
-          projectUrl: "https://sideris.app",
+          project: "ClauseOps",
+          projectUrl: "https://clauseops.com",
           description: "Invited among the 40 best ideas to develop a startup using Lovable and integrating Polar",
         },
       ],
@@ -30,7 +30,8 @@ export const Hackathons = () => {
           result: "Participant",
           project: "WindSite",
           projectUrl: "https://windsite.cloud",
-          description: "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
+          description:
+            "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
         },
       ],
     },
@@ -73,10 +74,7 @@ export const Hackathons = () => {
         <h2 className="text-2xl font-bold mb-10">Recent Hackathons</h2>
         <div className="space-y-6">
           {hackathons.map((hackathon, index) => (
-            <div
-              key={index}
-              className="bg-card border border-border rounded-xl p-5 animate-fade-in"
-            >
+            <div key={index} className="bg-card border border-border rounded-xl p-5 animate-fade-in">
               <div className="flex items-center gap-4 mb-5">
                 <img
                   src={hackathon.logo}
@@ -90,13 +88,14 @@ export const Hackathons = () => {
               </div>
               <div className="space-y-4">
                 {hackathon.editions.map((edition, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col gap-1 pl-4 border-l-2 border-primary/30"
-                  >
+                  <div key={i} className="flex flex-col gap-1 pl-4 border-l-2 border-primary/30">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
-                        <span className={`font-bold ${edition.result === "1st Place" ? "text-yellow-500" : edition.result === "3rd Place" ? "text-amber-700" : "text-primary"}`}>{edition.result}</span>
+                        <span
+                          className={`font-bold ${edition.result === "1st Place" ? "text-yellow-500" : edition.result === "3rd Place" ? "text-amber-700" : "text-primary"}`}
+                        >
+                          {edition.result}
+                        </span>
                         {"project" in edition && edition.project ? (
                           <>
                             <span className="text-muted-foreground">developing</span>
@@ -117,12 +116,12 @@ export const Hackathons = () => {
                             </a>
                           </>
                         ) : (
-                          <span className="text-muted-foreground">{"description" in edition && edition.description}</span>
+                          <span className="text-muted-foreground">
+                            {"description" in edition && edition.description}
+                          </span>
                         )}
                       </div>
-                      <span className="text-xs text-muted-foreground whitespace-nowrap">
-                        {edition.period}
-                      </span>
+                      <span className="text-xs text-muted-foreground whitespace-nowrap">{edition.period}</span>
                     </div>
                     {"description" in edition && edition.description && "project" in edition && edition.project && (
                       <p className="text-xs text-muted-foreground mt-1">{edition.description}</p>
