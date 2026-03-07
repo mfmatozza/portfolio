@@ -92,36 +92,41 @@ export const Hackathons = () => {
                 {hackathon.editions.map((edition, i) => (
                   <div
                     key={i}
-                    className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 pl-4 border-l-2 border-primary/30"
+                    className="flex flex-col gap-1 pl-4 border-l-2 border-primary/30"
                   >
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
-                      <span className={`font-bold ${edition.result === "1st Place" ? "text-yellow-500" : edition.result === "3rd Place" ? "text-amber-700" : "text-primary"}`}>{edition.result}</span>
-                      {"project" in edition && edition.project ? (
-                        <>
-                          <span className="text-muted-foreground">developing</span>
-                          <a
-                            href={edition.projectUrl}
-                            target="_blank"
-                            rel="dofollow"
-                            className="font-medium text-foreground hover:text-primary transition-colors"
-                          >
-                            {edition.project}
-                          </a>
-                          <a
-                            href="#projects"
-                            className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            <ArrowUp className="w-3 h-3" />
-                            <span>see above</span>
-                          </a>
-                        </>
-                      ) : (
-                        <span className="text-muted-foreground">{"description" in edition && edition.description}</span>
-                      )}
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
+                        <span className={`font-bold ${edition.result === "1st Place" ? "text-yellow-500" : edition.result === "3rd Place" ? "text-amber-700" : "text-primary"}`}>{edition.result}</span>
+                        {"project" in edition && edition.project ? (
+                          <>
+                            <span className="text-muted-foreground">developing</span>
+                            <a
+                              href={edition.projectUrl}
+                              target="_blank"
+                              rel="dofollow"
+                              className="font-medium text-foreground hover:text-primary transition-colors"
+                            >
+                              {edition.project}
+                            </a>
+                            <a
+                              href="#projects"
+                              className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <ArrowUp className="w-3 h-3" />
+                              <span>see above</span>
+                            </a>
+                          </>
+                        ) : (
+                          <span className="text-muted-foreground">{"description" in edition && edition.description}</span>
+                        )}
+                      </div>
+                      <span className="text-xs text-muted-foreground whitespace-nowrap">
+                        {edition.period}
+                      </span>
                     </div>
-                    <span className="text-xs text-muted-foreground whitespace-nowrap">
-                      {edition.period}
-                    </span>
+                    {"description" in edition && edition.description && "project" in edition && edition.project && (
+                      <p className="text-xs text-muted-foreground mt-1">{edition.description}</p>
+                    )}
                   </div>
                 ))}
               </div>
