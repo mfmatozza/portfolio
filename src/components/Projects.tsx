@@ -3,6 +3,18 @@ import { ExternalLink, Linkedin, FileText, Github, Trophy } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
+      title: "ClauseOps",
+      role: "Co-Founder & Developer",
+      period: "March 2026",
+      description:
+        "Extracts enforceable technical obligations from enterprise contracts using AI, then continuously reconciles them against live infrastructure across AWS, GitHub, Vercel, and 15 other platforms. Built for B2B SaaS companies that need to prove compliance before audits find it for them.",
+      tags: ["AI", "Compliance", "B2B SaaS"],
+      links: {
+        website: "https://clauseops.com",
+      },
+      dofollow: true,
+    },
+    {
       title: "WindSite",
       role: "Co-Founder & Developer",
       period: "February 2026",
