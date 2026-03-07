@@ -1,4 +1,4 @@
-import { ExternalLink, Linkedin, FileText, Github, Trophy } from "lucide-react";
+import { ExternalLink, Linkedin, FileText, Github, Trophy, Chrome } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
@@ -38,6 +38,7 @@ export const Projects = () => {
       links: {
         website: "https://linkeclean.site",
         github: "https://github.com/mfmatozza/LinkeClean",
+        chrome: "https://chromewebstore.google.com/detail/linkeclean-by-michele-mat/pbfcgonhbmpfjgbmpjfgbclcmngihadi",
       },
       dofollow: true,
     },
@@ -191,6 +192,17 @@ export const Projects = () => {
                     >
                       <Trophy className="w-3.5 h-3.5" />
                       <span>DevPost</span>
+                    </a>
+                  )}
+                  {"chrome" in project.links && project.links.chrome && (
+                    <a
+                      href={project.links.chrome}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Chrome className="w-3.5 h-3.5" />
+                      <span>Chrome Store</span>
                     </a>
                   )}
                 </div>
