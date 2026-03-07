@@ -194,6 +194,17 @@ export const Projects = () => {
                       <span>DevPost</span>
                     </a>
                   )}
+                  {"chrome" in project.links && project.links.chrome && (
+                    <a
+                      href={project.links.chrome}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Chrome className="w-3.5 h-3.5" />
+                      <span>Chrome Store</span>
+                    </a>
+                  )}
                 </div>
               )}
             </div>
