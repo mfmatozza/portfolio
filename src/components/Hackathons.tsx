@@ -2,9 +2,24 @@ import { ExternalLink, ArrowUp } from "lucide-react";
 import hacklabLogo from "@/assets/hacklab-logo.png";
 import hfarmLogo from "@/assets/hfarm-logo.png";
 import hackeuropeLogo from "@/assets/hackeurope-logo.png";
+import promptStartupLogo from "@/assets/prompt-a-startup-logo.png";
 
 export const Hackathons = () => {
   const hackathons = [
+    {
+      competition: "Prompt-a-Startup Stockholm",
+      location: "Stockholm, Sweden",
+      logo: promptStartupLogo,
+      editions: [
+        {
+          period: "March 2026",
+          result: "Participant",
+          project: "Sideris",
+          projectUrl: "https://sideris.app",
+          description: "Invited among the 40 best ideas to develop a startup using Lovable and integrating Polar",
+        },
+      ],
+    },
     {
       competition: "HackEurope Dublin",
       location: "Dublin, Ireland",
