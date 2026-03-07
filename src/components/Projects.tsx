@@ -1,4 +1,4 @@
-import { ExternalLink, Linkedin, FileText, Github, Trophy } from "lucide-react";
+import { ExternalLink, Linkedin, FileText, Github, Trophy, Chrome } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
