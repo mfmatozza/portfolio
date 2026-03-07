@@ -4,7 +4,7 @@ export const Projects = () => {
   const projects = [
     {
       title: "ClauseOps",
-      role: "Co-Founder & Developer",
+      role: "Solo founder & Developer",
       period: "March 2026",
       description:
         "Extracts enforceable technical obligations from enterprise contracts using AI, then continuously reconciles them against live infrastructure across AWS, GitHub, Vercel, and 15 other platforms. Built for B2B SaaS companies that need to prove compliance before audits find it for them.",
@@ -112,20 +112,13 @@ export const Projects = () => {
             >
               <div className="flex justify-between items-start mb-1">
                 <h3 className="text-base font-bold">{project.title}</h3>
-                <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
-                  {project.period}
-                </span>
+                <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">{project.period}</span>
               </div>
               <p className="text-primary text-xs font-medium mb-2">{project.role}</p>
-              <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
-                {project.description}
-              </p>
+              <p className="text-xs text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-1.5 mb-3">
                 {project.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-2 py-1 bg-secondary rounded-full text-xs"
-                  >
+                  <span key={tagIndex} className="px-2 py-1 bg-secondary rounded-full text-xs">
                     {tag}
                   </span>
                 ))}
