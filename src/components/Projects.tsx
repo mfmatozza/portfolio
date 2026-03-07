@@ -38,6 +38,7 @@ export const Projects = () => {
       links: {
         website: "https://linkeclean.site",
         github: "https://github.com/mfmatozza/LinkeClean",
+        chrome: "https://chromewebstore.google.com/detail/linkeclean-by-michele-mat/pbfcgonhbmpfjgbmpjfgbclcmngihadi",
       },
       dofollow: true,
     },
