@@ -12,7 +12,6 @@ export const Projects = () => {
       links: {
         website: "https://clauseops.com",
       },
-      dofollow: true,
     },
     {
       title: "WindSite",
