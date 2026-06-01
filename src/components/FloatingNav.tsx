@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Home, BookOpen, Briefcase, Code, Sun, Moon, Swords } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 const ExtracurricularIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
@@ -9,17 +11,18 @@ const ExtracurricularIcon = () => (
 );
 
 const navItems = [
-  { id: "home", icon: Home, label: "Home" },
-  { id: "education", icon: BookOpen, label: "Education" },
-  { id: "experience", icon: Briefcase, label: "Experience" },
-  { id: "extracurricular", icon: ExtracurricularIcon, label: "Extracurricular" },
-  { id: "projects", icon: Code, label: "Projects" },
-  { id: "hackathons", icon: Swords, label: "Hackathons" },
+  { id: "home", icon: Home, label: { en: "Home", it: "Home" } },
+  { id: "education", icon: BookOpen, label: { en: "Education", it: "Istruzione" } },
+  { id: "experience", icon: Briefcase, label: { en: "Experience", it: "Esperienza" } },
+  { id: "extracurricular", icon: ExtracurricularIcon, label: { en: "Extracurricular", it: "Attività Extra" } },
+  { id: "projects", icon: Code, label: { en: "Projects", it: "Progetti" } },
+  { id: "hackathons", icon: Swords, label: { en: "Hackathons", it: "Hackathon" } },
 ];
 
 export const FloatingNav = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const { lang } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,7 +78,7 @@ export const FloatingNav = () => {
                   "hover:bg-muted/50",
                   isActive && "text-navbar-active"
                 )}
-                aria-label={item.label}
+                aria-label={item.label[lang]}
               >
                 <Icon className="w-5 h-5" />
                 {isActive && (
@@ -84,6 +87,8 @@ export const FloatingNav = () => {
               </button>
             );
           })}
+          <div className="w-px h-6 bg-border mx-1" />
+          <LanguageToggle />
           <div className="w-px h-6 bg-border mx-1" />
           <button
             onClick={toggleTheme}
