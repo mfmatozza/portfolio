@@ -1,0 +1,9 @@
+# Michele F. Matozza
+
+> Portfolio of Michele Francesco Matozza — student, builder, and hackathon enthusiast. Showcases education, experience, projects, hackathons, and extracurricular activities.
+
+Available in English and Italian. Hacker-inspired aesthetic with a focus on technology, AI, and entrepreneurship.
+
+## Pages
+
+- [Home](/): Single-page portfolio with hero, education, experience, projects, hackathons, extracurriculars, and contact links.
