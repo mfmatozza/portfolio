@@ -113,7 +113,7 @@ export const Hackathons = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
                         <span
-                          className={`font-bold ${edition.result === first ? "text-yellow-500" : edition.result === third ? "text-amber-700" : "text-primary"}`}
+                          className={`font-bold ${edition.result === first ? "text-yellow-500" : edition.result === second ? "text-slate-400" : edition.result === third ? "text-amber-700" : "text-primary"}`}
                         >
                           {edition.result}
                         </span>
