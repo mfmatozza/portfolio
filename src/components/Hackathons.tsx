@@ -12,6 +12,7 @@ export const Hackathons = () => {
 
   const participant = it ? "Partecipante" : "Participant";
   const first = it ? "1° Posto" : "1st Place";
+  const second = it ? "2° Posto" : "2nd Place";
   const third = it ? "3° Posto" : "3rd Place";
   const developing = it ? "sviluppando" : "developing";
   const seeAbove = it ? "vedi sopra" : "see above";
