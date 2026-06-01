@@ -43,7 +43,7 @@ export const Hackathons = () => {
           project: "WindSite",
           projectUrl: "https://windsite.cloud",
           description: it
-            ? "Sviluppato una valutazione AI per parchi eolici offshore utilizzando ReactFlow.js, RLMs e tanto Monster"
+            ? "Sviluppato una valutazione AI per parchi eolici offshore utilizzando ReactFlow.js, RLMs e tanta Monster"
             : "Developed an AI-powered offshore windfarm assessment using ReactFlow.js, RLMs, and a lot of Monster",
         },
       ],

@@ -27,8 +27,8 @@ export const ExtracurricularActivities = () => {
           title: it ? "Membro del Consiglio" : "Board Member",
           period: it ? "Ott 2024 - Ago 2025" : "Oct 2024 - Aug 2025",
           description: it
-            ? "Ho contribuito alle decisioni strategiche e alla crescita organizzativa come membro fondatore del consiglio."
-            : "Contributed to strategic decisions and organizational growth as a founding board member.",
+            ? "Ho contribuito alle decisioni strategiche e alla crescita organizzativa come membro attivo del consiglio."
+            : "Contributed to strategic decisions and organizational growth as an active board member.",
         },
       ],
     },
