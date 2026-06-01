@@ -3,6 +3,7 @@ import hacklabLogo from "@/assets/hacklab-logo.png";
 import hfarmLogo from "@/assets/hfarm-logo.png";
 import hackeuropeLogo from "@/assets/hackeurope-logo.png";
 import promptStartupLogo from "@/assets/prompt-a-startup-logo.png";
+import hostingerHorizonsLogo from "@/assets/hostinger-horizons-logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hackathons = () => {
