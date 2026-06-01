@@ -3,6 +3,7 @@ import hacklabLogo from "@/assets/hacklab-logo.png";
 import hfarmLogo from "@/assets/hfarm-logo.png";
 import hackeuropeLogo from "@/assets/hackeurope-logo.png";
 import promptStartupLogo from "@/assets/prompt-a-startup-logo.png";
+import hostingerHorizonsLogo from "@/assets/hostinger-horizons-logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hackathons = () => {
@@ -11,11 +12,26 @@ export const Hackathons = () => {
 
   const participant = it ? "Partecipante" : "Participant";
   const first = it ? "1° Posto" : "1st Place";
+  const second = it ? "2° Posto" : "2nd Place";
   const third = it ? "3° Posto" : "3rd Place";
   const developing = it ? "sviluppando" : "developing";
   const seeAbove = it ? "vedi sopra" : "see above";
 
   const hackathons = [
+    {
+      competition: "Hostinger Horizons Hackathon",
+      location: it ? "Milano, Italia" : "Milan, Italy",
+      logo: hostingerHorizonsLogo,
+      editions: [
+        {
+          period: it ? "Maggio 2026" : "May 2026",
+          result: second,
+          description: it
+            ? "Sviluppato un sito di personalizzazione di abbigliamento basato su AI integrando Printful in Hostinger Horizons in meno di 2 ore di hackathon"
+            : "Developed an AI-powered clothing customizer website integrating Printful into Hostinger Horizons in under 2 hours of hackathon",
+        },
+      ],
+    },
     {
       competition: "Prompt-a-Startup Stockholm",
       location: it ? "Stoccolma, Svezia" : "Stockholm, Sweden",
@@ -97,7 +113,7 @@ export const Hackathons = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
                         <span
-                          className={`font-bold ${edition.result === first ? "text-yellow-500" : edition.result === third ? "text-amber-700" : "text-primary"}`}
+                          className={`font-bold ${edition.result === first ? "text-yellow-500" : edition.result === second ? "text-slate-400" : edition.result === third ? "text-amber-700" : "text-primary"}`}
                         >
                           {edition.result}
                         </span>
