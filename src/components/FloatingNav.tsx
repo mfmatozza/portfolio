@@ -68,7 +68,7 @@ export const FloatingNav = () => {
                   "hover:bg-muted/50",
                   isActive && "text-navbar-active"
                 )}
-                aria-label={item.label}
+                aria-label={item.label[lang]}
               >
                 <Icon className="w-5 h-5" />
                 {isActive && (
@@ -77,6 +77,8 @@ export const FloatingNav = () => {
               </button>
             );
           })}
+          <div className="w-px h-6 bg-border mx-1" />
+          <LanguageToggle />
           <div className="w-px h-6 bg-border mx-1" />
           <button
             onClick={toggleTheme}
