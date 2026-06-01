@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -64,6 +64,16 @@ export const Hero = () => {
               >
                 <Linkedin className="w-3.5 h-3.5" />
                 <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/mfmatozza"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-xs"
+                aria-label="GitHub"
+              >
+                <Github className="w-3.5 h-3.5" />
+                <span>GitHub</span>
               </a>
             </div>
           </div>
