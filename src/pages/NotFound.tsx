@@ -19,6 +19,11 @@ const NotFound = () => {
         />
         <meta name="robots" content="noindex" />
         <link rel="canonical" href={`https://michelematozza.com${location.pathname}`} />
+        <meta property="og:title" content="404 — Page not found | Michele F. Matozza" />
+        <meta property="og:description" content="The page you're looking for doesn't exist. Head back to the portfolio home." />
+        <meta property="og:url" content={`https://michelematozza.com${location.pathname}`} />
+        <meta name="twitter:title" content="404 — Page not found | Michele F. Matozza" />
+        <meta name="twitter:description" content="The page you're looking for doesn't exist. Head back to the portfolio home." />
       </Helmet>
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">404</h1>
