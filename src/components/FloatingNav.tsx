@@ -10,9 +10,19 @@ const ExtracurricularIcon = () => (
   </svg>
 );
 
+const navItems = [
+  { id: "home", icon: Home, label: { en: "Home", it: "Home" } },
+  { id: "education", icon: BookOpen, label: { en: "Education", it: "Istruzione" } },
+  { id: "experience", icon: Briefcase, label: { en: "Experience", it: "Esperienza" } },
+  { id: "extracurricular", icon: ExtracurricularIcon, label: { en: "Extracurricular", it: "Attività Extra" } },
+  { id: "projects", icon: Code, label: { en: "Projects", it: "Progetti" } },
+  { id: "hackathons", icon: Swords, label: { en: "Hackathons", it: "Hackathon" } },
+];
+
 export const FloatingNav = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const { lang } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
