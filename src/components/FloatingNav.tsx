@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Home, BookOpen, Briefcase, Code, Sun, Moon, Swords } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLanguage, tr } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageToggle } from "@/components/LanguageToggle";
 
 const ExtracurricularIcon = () => (
