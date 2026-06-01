@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { Mail, Linkedin } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
+  const { lang } = useLanguage();
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Hi, I'm Michele";
-  
+  const fullText = lang === "it" ? "Ciao, sono Michele" : "Hi, I'm Michele";
+
   useEffect(() => {
+    setDisplayText("");
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
       if (currentIndex <= fullText.length) {
@@ -16,9 +19,14 @@ export const Hero = () => {
         clearInterval(typingInterval);
       }
     }, 100);
-    
+
     return () => clearInterval(typingInterval);
-  }, []);
+  }, [fullText]);
+
+  const intro =
+    lang === "it"
+      ? "Sono uno studente universitario di 20 anni con un forte interesse per la tecnologia, l'imprenditorialità e l'innovazione. Mi piace imparare velocemente, lavorare in team e trasformare le idee in soluzioni concrete. Oltre al percorso accademico, ricopro il ruolo di Rappresentante di Corso, contribuendo a migliorare l'esperienza universitaria."
+      : "I am a 20-year-old university student with a strong interest in technology, entrepreneurship, and innovation. I enjoy learning quickly, working in teams, and turning ideas into practical solutions. Alongside my academic path, I serve as a University Course Representative, where I contribute to improving the university experience.";
 
   return (
     <section id="home" className="flex items-center justify-center px-6 pt-16 pb-4">
@@ -36,7 +44,7 @@ export const Hero = () => {
               className="text-sm text-muted-foreground mb-6 max-w-md leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
-              I am a 20-year-old university student with a strong interest in technology, entrepreneurship, and innovation. I enjoy learning quickly, working in teams, and turning ideas into practical solutions. Alongside my academic path, I serve as a University Course Representative, where I contribute to improving the university experience.
+              {intro}
             </p>
             <div className="flex gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <a

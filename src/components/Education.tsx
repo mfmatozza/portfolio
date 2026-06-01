@@ -1,30 +1,45 @@
 import { GraduationCap, BookOpen } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Education = () => {
+  const { lang } = useLanguage();
+  const t = {
+    title: lang === "it" ? "Istruzione" : "Education",
+  };
   const education = [
     {
       icon: GraduationCap,
       institution: "Bocconi University",
-      location: "Milan, Italy",
-      degree: "Bachelor in Economics, Management and Computer Science",
-      highlight: "Computer Science",
-      period: "2024 - 2027",
-      details: "Statistics 1: 31/30, Computer Science: 29/30, IT Law: 30/30, Course Representative",
+      location: lang === "it" ? "Milano, Italia" : "Milan, Italy",
+      degree:
+        lang === "it"
+          ? "Laurea in Economia, Management e Informatica"
+          : "Bachelor in Economics, Management and Computer Science",
+      highlight: lang === "it" ? "Informatica" : "Computer Science",
+      period: lang === "it" ? "2024 - 2027" : "2024 - 2027",
+      details:
+        lang === "it"
+          ? "Statistica 1: 31/30, Informatica: 29/30, Diritto IT: 30/30, Rappresentante di Corso"
+          : "Statistics 1: 31/30, Computer Science: 29/30, IT Law: 30/30, Course Representative",
     },
     {
       icon: BookOpen,
       institution: "Institut International de Lancy",
-      location: "Geneva, Switzerland",
-      degree: "International Baccalaureat",
+      location: lang === "it" ? "Ginevra, Svizzera" : "Geneva, Switzerland",
+      degree:
+        lang === "it" ? "Baccalaureato Internazionale" : "International Baccalaureat",
       period: "2022 - 2024",
-      details: "Physics, Mathematics, Business Management, Chemistry, Italian Literature, English Literature",
+      details:
+        lang === "it"
+          ? "Fisica, Matematica, Economia Aziendale, Chimica, Letteratura Italiana, Letteratura Inglese"
+          : "Physics, Mathematics, Business Management, Chemistry, Italian Literature, English Literature",
     },
   ];
 
   return (
     <section id="education" className="flex items-center justify-center px-6 py-10">
       <div className="max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-10">Education</h2>
+        <h2 className="text-2xl font-bold mb-10">{t.title}</h2>
         <div className="space-y-8">
           {education.map((edu, index) => (
             <div key={index} className="relative pl-14 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>

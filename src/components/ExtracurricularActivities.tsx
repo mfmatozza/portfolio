@@ -1,60 +1,69 @@
 import { Rocket, Code, ExternalLink } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const ExtracurricularActivities = () => {
+  const { lang } = useLanguage();
+  const it = lang === "it";
+
   const organizations = [
     {
       icon: Rocket,
       name: "Astra Bocconi",
-      period: "Oct 2024 - Present",
+      period: it ? "Ott 2024 - Presente" : "Oct 2024 - Present",
       roles: [
         {
-          title: "Head of Technology",
-          period: "Aug 2025 - Present",
-          description:
-            "Leading the technology division, overseeing technical projects and driving innovation within the organization.",
+          title: it ? "Head of Technology" : "Head of Technology",
+          period: it ? "Ago 2025 - Presente" : "Aug 2025 - Present",
+          description: it
+            ? "Guido la divisione tecnologica, supervisionando i progetti tecnici e promuovendo l'innovazione all'interno dell'organizzazione."
+            : "Leading the technology division, overseeing technical projects and driving innovation within the organization.",
           links: [
             { label: "Free at B", url: "https://freeatb.it" },
-            { label: "Website", url: "https://astrabocconi.com" },
+            { label: it ? "Sito Web" : "Website", url: "https://astrabocconi.com" },
           ],
         },
         {
-          title: "Board Member",
-          period: "Oct 2024 - Aug 2025",
-          description:
-            "Contributed to strategic decisions and organizational growth as a founding board member.",
+          title: it ? "Membro del Consiglio" : "Board Member",
+          period: it ? "Ott 2024 - Ago 2025" : "Oct 2024 - Aug 2025",
+          description: it
+            ? "Ho contribuito alle decisioni strategiche e alla crescita organizzativa come membro fondatore del consiglio."
+            : "Contributed to strategic decisions and organizational growth as a founding board member.",
         },
       ],
     },
     {
       customIcon: lovableLogo,
       name: "Lovable",
-      period: "Jan 2025 - Present",
+      period: it ? "Gen 2025 - Presente" : "Jan 2025 - Present",
       roles: [
         {
           title: "Lovable Campus Leader",
           period: "",
-          description:
-            "Chosen as one of the Lovable Ambassadors to represent Lovable through events and partnerships.",
+          description: it
+            ? "Scelto come uno degli Ambassador Lovable per rappresentare Lovable attraverso eventi e partnership."
+            : "Chosen as one of the Lovable Ambassadors to represent Lovable through events and partnerships.",
         },
       ],
     },
     {
       icon: Code,
       name: "Hacklab",
-      period: "Oct 2024 - Present",
+      period: it ? "Ott 2024 - Presente" : "Oct 2024 - Present",
       roles: [
         {
-          title: "President",
-          period: "Jan 2025 - Present",
-          description:
-            "Leading the organization and driving hackathon culture within the university community.",
+          title: it ? "Presidente" : "President",
+          period: it ? "Gen 2025 - Presente" : "Jan 2025 - Present",
+          description: it
+            ? "Guido l'organizzazione e promuovo la cultura degli hackathon all'interno della comunità universitaria."
+            : "Leading the organization and driving hackathon culture within the university community.",
         },
         {
-          title: "Hackathon Participant",
-          period: "Oct 2024 - Dec 2025",
-          description:
-            "3x Hackathon participant, 1x first place, 1x third place.",
+          title: it ? "Partecipante a Hackathon" : "Hackathon Participant",
+          period: it ? "Ott 2024 - Dic 2025" : "Oct 2024 - Dec 2025",
+          description: it
+            ? "3 volte partecipante a hackathon, 1 primo posto, 1 terzo posto."
+            : "3x Hackathon participant, 1x first place, 1x third place.",
         },
       ],
     },
@@ -63,7 +72,7 @@ export const ExtracurricularActivities = () => {
   return (
     <section id="extracurricular" className="flex items-center justify-center px-6 py-16">
       <div className="max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-10">Extracurricular Activities</h2>
+        <h2 className="text-2xl font-bold mb-10">{it ? "Attività Extracurricolari" : "Extracurricular Activities"}</h2>
         <div className="space-y-8">
           {organizations.map((org, index) => (
             <div

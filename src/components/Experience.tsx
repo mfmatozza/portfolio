@@ -1,72 +1,108 @@
-import { Terminal, Code, Globe, Atom, Ship, Briefcase, Users } from "lucide-react";
+import { Globe, Atom, Ship, Briefcase, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Experience = () => {
+  const { lang } = useLanguage();
+  const it = lang === "it";
+  const geneva = it ? "Ginevra, Svizzera" : "Geneva, Switzerland";
+
   const experience = [
     {
       icon: Globe,
       company: "Ville de Genève",
-      position: "Intern at Service des Relations Extérieures",
-      location: "Geneva, Switzerland",
-      period: "July 2025 - August 2025",
-      bullets: [
-        "Assisted with daily tasks and contributed to organizing the Swiss National Day (1st August)",
-        "Collaborated in a diverse team environment",
-        "Utilized Microsoft Excel and PowerPoint to support projects and presentations",
-      ],
+      position: it
+        ? "Stagista presso il Service des Relations Extérieures"
+        : "Intern at Service des Relations Extérieures",
+      location: geneva,
+      period: it ? "Luglio 2025 - Agosto 2025" : "July 2025 - August 2025",
+      bullets: it
+        ? [
+            "Supporto alle attività quotidiane e contributo all'organizzazione della Festa Nazionale Svizzera (1 agosto)",
+            "Collaborazione in un team diversificato e internazionale",
+            "Utilizzo di Microsoft Excel e PowerPoint per supportare progetti e presentazioni",
+          ]
+        : [
+            "Assisted with daily tasks and contributed to organizing the Swiss National Day (1st August)",
+            "Collaborated in a diverse team environment",
+            "Utilized Microsoft Excel and PowerPoint to support projects and presentations",
+          ],
     },
     {
       icon: Atom,
       company: "CERN",
-      position: "Shadow Program",
-      location: "Geneva, Switzerland",
-      period: "July 2023 - July 2023",
-      bullets: [
-        "Exploration of how scientific discoveries are made, via the application of the scientific method and collaborative research",
-        "Application of scientific method in simple Physics experiments and data analysis with Discrete Fourier Transforms",
-        "Data Analysis in Excel",
-      ],
+      position: it ? "Programma Shadow" : "Shadow Program",
+      location: geneva,
+      period: it ? "Luglio 2023" : "July 2023 - July 2023",
+      bullets: it
+        ? [
+            "Esplorazione di come si fanno le scoperte scientifiche, applicando il metodo scientifico e la ricerca collaborativa",
+            "Applicazione del metodo scientifico in semplici esperimenti di Fisica e analisi dati con Trasformate di Fourier Discrete",
+            "Analisi dati in Excel",
+          ]
+        : [
+            "Exploration of how scientific discoveries are made, via the application of the scientific method and collaborative research",
+            "Application of scientific method in simple Physics experiments and data analysis with Discrete Fourier Transforms",
+            "Data Analysis in Excel",
+          ],
     },
     {
       icon: Ship,
       company: "Mediterranean Shipping Company (MSC)",
-      position: "Intern",
-      location: "Geneva, Switzerland",
-      period: "June 2023 - June 2023",
-      bullets: [
-        "Working in the IT department of a global corporation using SCRUM methodology",
-        "Introduction to Git and C#",
-        "Application of programming principles in developing backend solutions for internal systems",
-      ],
+      position: it ? "Stagista" : "Intern",
+      location: geneva,
+      period: it ? "Giugno 2023" : "June 2023 - June 2023",
+      bullets: it
+        ? [
+            "Lavoro nel dipartimento IT di una multinazionale utilizzando la metodologia SCRUM",
+            "Introduzione a Git e C#",
+            "Applicazione di principi di programmazione nello sviluppo di soluzioni backend per sistemi interni",
+          ]
+        : [
+            "Working in the IT department of a global corporation using SCRUM methodology",
+            "Introduction to Git and C#",
+            "Application of programming principles in developing backend solutions for internal systems",
+          ],
     },
     {
       icon: Briefcase,
       company: "Procter & Gamble",
-      position: "Shadow Program",
-      location: "Geneva, Switzerland",
-      period: "June 2022 - June 2022",
-      bullets: [
-        "Working alongside a senior brand manager",
-        "Assigned a research project to develop branding solution to win amongst point of market entry consumers",
-        "Understood the importance of marketing and branding in developing a solution",
-      ],
+      position: it ? "Programma Shadow" : "Shadow Program",
+      location: geneva,
+      period: it ? "Giugno 2022" : "June 2022 - June 2022",
+      bullets: it
+        ? [
+            "Affiancamento a un senior brand manager",
+            "Assegnato un progetto di ricerca per sviluppare una soluzione di branding rivolta ai consumatori del punto di ingresso del mercato",
+            "Compresa l'importanza del marketing e del branding nello sviluppo di una soluzione",
+          ]
+        : [
+            "Working alongside a senior brand manager",
+            "Assigned a research project to develop branding solution to win amongst point of market entry consumers",
+            "Understood the importance of marketing and branding in developing a solution",
+          ],
     },
     {
       icon: Users,
       company: "Institut International de Lancy",
-      position: "Basketball Coach",
-      location: "Geneva, Switzerland",
-      period: "September 2022 - April 2024",
-      bullets: [
-        "Worked with children aged 8-16",
-        "Developed adaptive communication skills",
-      ],
+      position: it ? "Allenatore di Basket" : "Basketball Coach",
+      location: geneva,
+      period: it ? "Settembre 2022 - Aprile 2024" : "September 2022 - April 2024",
+      bullets: it
+        ? [
+            "Lavoro con bambini dagli 8 ai 16 anni",
+            "Sviluppo di capacità comunicative adattive",
+          ]
+        : [
+            "Worked with children aged 8-16",
+            "Developed adaptive communication skills",
+          ],
     },
   ];
 
   return (
     <section id="experience" className="flex items-center justify-center px-6 py-16">
       <div className="max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-10">Experience</h2>
+        <h2 className="text-2xl font-bold mb-10">{it ? "Esperienza" : "Experience"}</h2>
         <div className="space-y-8">
           {experience.map((exp, index) => (
             <div
