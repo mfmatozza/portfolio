@@ -19,6 +19,20 @@ export const Hackathons = () => {
 
   const hackathons = [
     {
+      competition: "Hostinger Horizons Hackathon",
+      location: it ? "Milano, Italia" : "Milan, Italy",
+      logo: hostingerHorizonsLogo,
+      editions: [
+        {
+          period: it ? "Maggio 2026" : "May 2026",
+          result: second,
+          description: it
+            ? "Sviluppato un sito di personalizzazione di abbigliamento basato su AI integrando Printful in Hostinger Horizons in meno di 2 ore di hackathon"
+            : "Developed an AI-powered clothing customizer website integrating Printful into Hostinger Horizons in under 2 hours of hackathon",
+        },
+      ],
+    },
+    {
       competition: "Prompt-a-Startup Stockholm",
       location: it ? "Stoccolma, Svezia" : "Stockholm, Sweden",
       logo: promptStartupLogo,
