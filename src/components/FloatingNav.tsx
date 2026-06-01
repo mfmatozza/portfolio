@@ -63,9 +63,9 @@ export const FloatingNav = () => {
   };
 
   return (
-    <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 animate-fade-in">
-      <div className="bg-navbar backdrop-blur-md rounded-full px-6 py-3 shadow-2xl border border-border/50">
-        <div className="flex items-center gap-1">
+    <nav className="fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-50 animate-fade-in max-w-[calc(100vw-1rem)]">
+      <div className="bg-navbar backdrop-blur-md rounded-full px-2 py-1.5 md:px-6 md:py-3 shadow-2xl border border-border/50">
+        <div className="flex items-center gap-0.5 md:gap-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeSection === item.id;
@@ -74,31 +74,31 @@ export const FloatingNav = () => {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "relative p-3 rounded-full transition-all duration-300",
+                  "relative p-1.5 md:p-3 rounded-full transition-all duration-300",
                   "hover:bg-muted/50",
                   isActive && "text-navbar-active"
                 )}
                 aria-label={item.label[lang]}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-4 h-4 md:w-5 md:h-5" />
                 {isActive && (
-                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-navbar-active rounded-full" />
+                  <span className="absolute -bottom-0.5 md:-bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-navbar-active rounded-full" />
                 )}
               </button>
             );
           })}
-          <div className="w-px h-6 bg-border mx-1" />
+          <div className="w-px h-5 md:h-6 bg-border mx-0.5 md:mx-1" />
           <LanguageToggle />
-          <div className="w-px h-6 bg-border mx-1" />
+          <div className="w-px h-5 md:h-6 bg-border mx-0.5 md:mx-1" />
           <button
             onClick={toggleTheme}
-            className="p-3 rounded-full transition-all duration-300 hover:bg-muted/50"
+            className="p-1.5 md:p-3 rounded-full transition-all duration-300 hover:bg-muted/50"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
-              <Sun className="w-5 h-5" />
+              <Sun className="w-4 h-4 md:w-5 md:h-5" />
             ) : (
-              <Moon className="w-5 h-5" />
+              <Moon className="w-4 h-4 md:w-5 md:h-5" />
             )}
           </button>
         </div>
