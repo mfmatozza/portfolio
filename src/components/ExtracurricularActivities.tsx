@@ -35,17 +35,18 @@ export const ExtracurricularActivities = () => {
     {
       customIcon: lovableLogo,
       name: "Lovable",
-      period: it ? "Gen 2025 - Presente" : "Jan 2025 - Present",
+      period: it ? "Gen 2025 - Lug 2026" : "Jan 2025 - Jul 2026",
       roles: [
         {
-          title: "Lovable Campus Leader",
-          period: "",
+          title: it ? "Lovable Campus Leader (ex)" : "Lovable Campus Leader (former)",
+          period: it ? "Gen 2025 - Lug 2026" : "Jan 2025 - Jul 2026",
           description: it
             ? "Scelto come uno degli Ambassador Lovable per rappresentare Lovable attraverso eventi e partnership."
             : "Chosen as one of the Lovable Ambassadors to represent Lovable through events and partnerships.",
         },
       ],
     },
+
     {
       icon: Code,
       name: "Hacklab",
