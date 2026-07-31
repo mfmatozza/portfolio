@@ -19,15 +19,14 @@ export const Education = () => {
       period: lang === "it" ? "2024 - 2027" : "2024 - 2027",
       details:
         lang === "it"
-          ? "Statistica 1: 31/30, Informatica: 29/30, Diritto IT: 30/30, Rappresentante di Corso"
-          : "Statistics 1: 31/30, Computer Science: 29/30, IT Law: 30/30, Course Representative",
+          ? "Rappresentante di Corso, Statistica: 31/30, Informatica: 29/30, Diritto IT: 30/30"
+          : "Course Representative, Statistics: 31/30, Computer Science: 29/30, IT Law: 30/30",
     },
     {
       icon: BookOpen,
       institution: "Institut International de Lancy",
       location: lang === "it" ? "Ginevra, Svizzera" : "Geneva, Switzerland",
-      degree:
-        lang === "it" ? "Baccalaureato Internazionale" : "International Baccalaureat",
+      degree: lang === "it" ? "Baccalaureato Internazionale" : "International Baccalaureat",
       period: "2022 - 2024",
       details:
         lang === "it"
@@ -55,9 +54,9 @@ export const Education = () => {
               </div>
               <p className="text-xs text-muted-foreground mb-1">{edu.location}</p>
               <p className="text-primary text-sm font-medium mb-2">
-                {edu.degree.split(edu.highlight || '___NOHIGHLIGHT___')[0]}
+                {edu.degree.split(edu.highlight || "___NOHIGHLIGHT___")[0]}
                 {edu.highlight && <span className="font-bold">{edu.highlight}</span>}
-                {edu.degree.split(edu.highlight || '___NOHIGHLIGHT___')[1]}
+                {edu.degree.split(edu.highlight || "___NOHIGHLIGHT___")[1]}
               </p>
               <p className="text-xs text-muted-foreground leading-relaxed">{edu.details}</p>
             </div>
