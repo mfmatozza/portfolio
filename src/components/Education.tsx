@@ -16,7 +16,7 @@ export const Education = () => {
           ? "Laurea in Economia, Management e Informatica"
           : "Bachelor in Economics, Management and Computer Science",
       highlight: lang === "it" ? "Informatica" : "Computer Science",
-      period: lang === "it" ? "2024 - 2027" : "2024 - 2027",
+      period: lang === "it" ? "Ago 2024 - Giu 2027" : "Aug 2024 - Jun 2027",
       details:
         lang === "it"
           ? "Rappresentante di Corso, Statistica: 31/30, Informatica: 29/30, Diritto IT: 30/30"
