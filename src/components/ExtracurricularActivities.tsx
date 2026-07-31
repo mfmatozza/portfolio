@@ -86,7 +86,7 @@ export const ExtracurricularActivities = () => {
             >
               <div className="absolute left-0 top-0 w-10 h-10 bg-card rounded-full flex items-center justify-center border border-border">
                 {org.customIcon ? (
-                  <img src={org.customIcon} alt={org.name} className="w-8 h-8 object-contain" />
+                  <img src={org.customIcon} alt={org.name} className="w-5 h-5 object-contain" />
                 ) : (
                   org.icon && <org.icon className="w-4 h-4 text-primary" />
                 )}
