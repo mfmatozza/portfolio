@@ -17,6 +17,8 @@ const navItems = [
   { id: "extracurricular", icon: ExtracurricularIcon, label: { en: "Extracurricular", it: "Attività Extra" } },
   { id: "projects", icon: Code, label: { en: "Projects", it: "Progetti" } },
   { id: "hackathons", icon: Swords, label: { en: "Hackathons", it: "Hackathon" } },
+  { id: "talks", icon: Mic, label: { en: "Talks", it: "Talk" } },
+
 ];
 
 export const FloatingNav = () => {
