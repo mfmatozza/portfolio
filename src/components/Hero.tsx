@@ -46,12 +46,16 @@ export const Hero = () => {
                 <span className="animate-pulse text-primary">_</span>
               </h1>
             </div>
+            <p className="text-xs text-primary mb-3 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+              {tagline}
+            </p>
             <p
               className="text-sm text-muted-foreground mb-6 max-w-md leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
               {intro}
             </p>
+
             <div className="flex gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <a
                 href="mailto:mf.matozza@gmail.com"
