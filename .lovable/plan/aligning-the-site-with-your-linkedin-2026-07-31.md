@@ -22,22 +22,16 @@ The Extracurricular section still lists Lovable as "Jan 2025 - Present". LinkedI
 
 Two of your top LinkedIn posts are talks — the vibecoding-in-marketing session for Prof. Marcello Mariani's Master's students at Università di Bologna, and the Idea Validation & MVPs session as HackLab President. Nothing on the site mentions this, and it's strong social proof. Small section with title, host, date, one line each.
 
-## 5. Add Skills, Languages and Certifications
-
-LinkedIn has 35 skills, 5 languages (English native/bilingual, Chinese elementary, etc.) and 3 certifications (Data Analysis with Excel – Bocconi; Software Development Fundamentals – IT STEP). A compact tag grid for skills plus a two-column strip for languages and certifications fits the hacker/terminal aesthetic without bloating the page.
-
 ## 6. Small consistency fixes
 
 - Bocconi dates: site says 2024 - 2027, LinkedIn says Aug 2024 – Jun 2027.
-- IIL: site says 2022 - 2024, LinkedIn says 2017 – 2024 (the site's dates cover only the IB, which may be intentional — confirm).
-- Add the LinkedIn "Open to work — Milan, on-site/hybrid" signal as a subtle status line in the hero, if you want recruiters to see it.
 
 ## What I need from you before building
 
 - VivaTicket details (title, dates, location, bullets)
-- Lovable Campus Leader end date
-- Which of items 4, 5, 6 you want (and the extra projects you mentioned — those can be a second pass)
+- Lovable Campus Leader end date, July 2027
+  &nbsp;
 
 ## Technical notes
 
-All changes are content/presentation in existing components: `Hero.tsx`, `Experience.tsx`, `ExtracurricularActivities.tsx`, `Education.tsx`. New sections would be new components (`Talks.tsx`, `SkillsLanguages.tsx`) rendered from `Index.tsx`, added to `FloatingNav`, and fully bilingual via `useLanguage()` like every other section. The Person JSON-LD in `Index.tsx` gets `worksFor`, `knowsLanguage`, and `knowsAbout` added for SEO.
+All changes are content/presentation in existing components: `Hero.tsx`, `Experience.tsx`, `ExtracurricularActivities.tsx`, `Education.tsx`. New sections would be new components (`Talks.tsx`rendered from `Index.tsx`, added to `FloatingNav`, and fully bilingual via `useLanguage()` like every other section. The Person JSON-LD in `Index.tsx` gets `worksFor`, `knowsLanguage`, and `knowsAbout` added for SEO.
