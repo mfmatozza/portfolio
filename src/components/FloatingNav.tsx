@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Home, BookOpen, Briefcase, Code, Sun, Moon, Swords } from "lucide-react";
+import { Home, BookOpen, Briefcase, Code, Sun, Moon, Swords, Mic } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -17,6 +17,8 @@ const navItems = [
   { id: "extracurricular", icon: ExtracurricularIcon, label: { en: "Extracurricular", it: "Attività Extra" } },
   { id: "projects", icon: Code, label: { en: "Projects", it: "Progetti" } },
   { id: "hackathons", icon: Swords, label: { en: "Hackathons", it: "Hackathon" } },
+  { id: "talks", icon: Mic, label: { en: "Talks", it: "Talk" } },
+
 ];
 
 export const FloatingNav = () => {

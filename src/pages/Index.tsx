@@ -6,6 +6,7 @@ import { Experience } from "@/components/Experience";
 import { ExtracurricularActivities } from "@/components/ExtracurricularActivities";
 import { Projects } from "@/components/Projects";
 import { Hackathons } from "@/components/Hackathons";
+import { Talks } from "@/components/Talks";
 import { Footer } from "@/components/Footer";
 
 const personJsonLd = {
@@ -13,14 +14,25 @@ const personJsonLd = {
   "@type": "Person",
   name: "Michele Francesco Matozza",
   alternateName: "Michele F. Matozza",
-  jobTitle: "Student",
+  jobTitle: "Software Engineer Intern",
   url: "https://michelematozza.com/",
   email: "mailto:mf.matozza@gmail.com",
+  worksFor: { "@type": "Organization", name: "VivaTicket" },
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Bocconi University" },
+  knowsLanguage: ["en", "it", "fr", "zh"],
+  knowsAbout: [
+    "Software Engineering",
+    "TypeScript",
+    "Artificial Intelligence",
+    "Entrepreneurship",
+    "Hackathons",
+  ],
   sameAs: [
     "https://www.linkedin.com/in/michele-francesco-matozza-17964b266",
     "https://github.com/mfmatozza",
   ],
 };
+
 
 const Index = () => {
   return (
@@ -42,6 +54,8 @@ const Index = () => {
         <ExtracurricularActivities />
         <Projects />
         <Hackathons />
+        <Talks />
+
       </main>
       <Footer />
     </div>

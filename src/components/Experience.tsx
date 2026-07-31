@@ -1,4 +1,4 @@
-import { Globe, Atom, Ship, Briefcase, Users } from "lucide-react";
+import { Globe, Atom, Ship, Briefcase, Users, Code2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Experience = () => {
@@ -7,6 +7,24 @@ export const Experience = () => {
   const geneva = it ? "Ginevra, Svizzera" : "Geneva, Switzerland";
 
   const experience = [
+    {
+      icon: Code2,
+      company: "VivaTicket",
+      position: it ? "Software Engineer Intern" : "Software Engineer Intern",
+      location: it ? "Milano, Italia" : "Milan, Italy",
+      period: it ? "2026 - Presente" : "2026 - Present",
+      bullets: it
+        ? [
+            "Sviluppo di funzionalità in TypeScript all'interno del team di ingegneria",
+            "Lavoro sull'infrastruttura software e sui sistemi interni della piattaforma di ticketing",
+            "Collaborazione in un team di prodotto internazionale",
+          ]
+        : [
+            "Building features in TypeScript within the engineering team",
+            "Working on software infrastructure and internal systems of the ticketing platform",
+            "Collaborating within an international product team",
+          ],
+    },
     {
       icon: Globe,
       company: "Ville de Genève",
@@ -27,6 +45,7 @@ export const Experience = () => {
             "Utilized Microsoft Excel and PowerPoint to support projects and presentations",
           ],
     },
+
     {
       icon: Atom,
       company: "CERN",

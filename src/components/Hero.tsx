@@ -23,10 +23,16 @@ export const Hero = () => {
     return () => clearInterval(typingInterval);
   }, [fullText]);
 
+  const tagline =
+    lang === "it"
+      ? "Economia & Informatica @ Bocconi · SWE Intern @ VivaTicket"
+      : "Economics & Computer Science @ Bocconi · SWE Intern @ VivaTicket";
+
   const intro =
     lang === "it"
-      ? "Sono uno studente universitario di 20 anni con un forte interesse per la tecnologia, l'imprenditorialità e l'innovazione. Mi piace imparare velocemente, lavorare in team e trasformare le idee in soluzioni concrete. Oltre al percorso accademico, ricopro il ruolo di Rappresentante di Corso, contribuendo a migliorare l'esperienza universitaria."
-      : "I am a 20-year-old university student with a strong interest in technology, entrepreneurship, and innovation. I enjoy learning quickly, working in teams, and turning ideas into practical solutions. Alongside my academic path, I serve as a University Course Representative, where I contribute to improving the university experience.";
+      ? "Studio Economia e Informatica alla Bocconi e lavoro come Software Engineer Intern in VivaTicket. Sono Presidente di HackLab Bocconi ed ex Lovable Campus Leader: costruisco prodotti agli hackathon, tengo talk su MVP e vibecoding, e trasformo le idee in soluzioni concrete in tempi brevi."
+      : "I study Economics and Computer Science at Bocconi and work as a Software Engineer Intern at VivaTicket. President of HackLab Bocconi and ex Lovable Campus Leader — I build products at hackathons, speak about MVPs and vibecoding, and turn ideas into shipped solutions fast.";
+
 
   return (
     <section id="home" className="flex items-center justify-center px-6 pt-16 pb-4">
@@ -40,12 +46,16 @@ export const Hero = () => {
                 <span className="animate-pulse text-primary">_</span>
               </h1>
             </div>
+            <p className="text-xs text-primary mb-3 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+              {tagline}
+            </p>
             <p
               className="text-sm text-muted-foreground mb-6 max-w-md leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
               {intro}
             </p>
+
             <div className="flex gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <a
                 href="mailto:mf.matozza@gmail.com"
