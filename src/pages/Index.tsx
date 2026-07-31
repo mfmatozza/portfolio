@@ -54,6 +54,8 @@ const Index = () => {
         <ExtracurricularActivities />
         <Projects />
         <Hackathons />
+        <Talks />
+
       </main>
       <Footer />
     </div>
