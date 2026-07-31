@@ -50,8 +50,9 @@ export const ExtracurricularActivities = () => {
     },
 
     {
-      icon: Code,
+      customIcon: hacklabLogo,
       name: "Hacklab",
+
       period: it ? "Ott 2024 - Presente" : "Oct 2024 - Present",
       roles: [
         {
