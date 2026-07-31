@@ -1,6 +1,8 @@
-import { Rocket, Code, ExternalLink } from "lucide-react";
+import { Rocket, ExternalLink } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.png";
+import hacklabLogo from "@/assets/hacklab-logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+
 
 export const ExtracurricularActivities = () => {
   const { lang } = useLanguage();
@@ -48,8 +50,9 @@ export const ExtracurricularActivities = () => {
     },
 
     {
-      icon: Code,
+      customIcon: hacklabLogo,
       name: "Hacklab",
+
       period: it ? "Ott 2024 - Presente" : "Oct 2024 - Present",
       roles: [
         {
