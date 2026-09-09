@@ -138,7 +138,36 @@ export const Projects = () => {
   return (
     <section id="projects" className="flex items-center justify-center px-6 py-16">
       <div className="max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-10">{it ? "Progetti Cofondati / Sviluppati" : "Projects Cofounded / Developed"}</h2>
+        <h2 className="text-2xl font-bold mb-4">{it ? "Progetti Cofondati / Sviluppati" : "Projects Cofounded / Developed"}</h2>
+
+        <button
+          type="button"
+          onClick={() => setShowAll((v) => !v)}
+          aria-expanded={showAll}
+          className="w-full flex items-center justify-between gap-2 px-4 py-2 mb-4 rounded-lg border border-border bg-card text-xs font-medium hover:border-primary/50 hover:text-primary transition-colors"
+        >
+          <span>{it ? "Vedi tutti i progetti" : "View all projects"}</span>
+          <ChevronDown className={`w-3.5 h-3.5 transition-transform ${showAll ? "rotate-180" : ""}`} />
+        </button>
+        {showAll && (
+          <ul className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 animate-fade-in">
+            {allSites.map((site) => (
+              <li key={site.url} className="text-xs leading-relaxed">
+                <a
+                  href={site.url}
+                  target="_blank"
+                  rel="dofollow"
+                  className="text-primary font-medium hover:underline"
+                >
+                  {site.name}
+                </a>
+                <span className="text-muted-foreground"> — {it ? site.it : site.en}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, index) => (
             <div
