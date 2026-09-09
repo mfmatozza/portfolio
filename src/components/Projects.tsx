@@ -1,9 +1,37 @@
-import { ExternalLink, Linkedin, FileText, Github, Trophy, Chrome } from "lucide-react";
+import { useState } from "react";
+import { ExternalLink, Linkedin, FileText, Github, Trophy, Chrome, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Projects = () => {
   const { lang } = useLanguage();
   const it = lang === "it";
+  const [showAll, setShowAll] = useState(false);
+
+  const allSites = [
+    { name: "WildTakes", url: "https://wildtakes.wtf", en: "A social arena where people drop 280-character hot takes and the crowd votes them hot, cold or mid.", it: "Un'arena social dove si pubblicano opinioni piccanti in 280 caratteri e la community le vota." },
+    { name: "MagicDomain", url: "https://magicdoma.in", en: "Turns any word or idea into clever domain hacks, checked for availability in seconds.", it: "Trasforma parole e idee in domini creativi, verificandone la disponibilità in pochi secondi." },
+    { name: "ClauseOps", url: "https://clauseops.com", en: "Extracts enforceable obligations from enterprise contracts and monitors them against live infrastructure.", it: "Estrae gli obblighi dai contratti aziendali e li monitora sull'infrastruttura live." },
+    { name: "IndieDevs", url: "https://indiedev.tips", en: "A community-curated knowledge base of micro-guides on launching, pricing and growing SaaS products.", it: "Una knowledge base di micro-guide su lancio, prezzi e crescita di prodotti SaaS." },
+    { name: "Michele's Notes", url: "https://michelesnotes.it", en: "Free notes, handouts and textbook resources shared between Bocconi students.", it: "Appunti, dispense e materiali universitari condivisi tra studenti Bocconi." },
+    { name: "Echo", url: "https://getecho.app", en: "An AI content team for X that turns ideas into ghostwritten tweets and publishes them automatically.", it: "Un team di contenuti AI per X che trasforma idee in tweet e li pubblica automaticamente." },
+    { name: "Let's Count", url: "https://letscount.live", en: "Beautiful, embeddable countdown timers for weddings, launches and anything worth waiting for.", it: "Countdown eleganti e integrabili per matrimoni, lanci e ogni attesa che conta." },
+    { name: "GustoLabs", url: "https://gustolabs.it", en: "An Italian recipe book with weekly meal planning and an automatic shopping list by aisle.", it: "Un ricettario italiano con pianificazione settimanale e lista della spesa divisa per reparto." },
+    { name: "The Python Console", url: "https://thepythonconsole.com", en: "A browser-based Python console that runs code and renders plots with no setup.", it: "Una console Python nel browser che esegue codice e mostra grafici senza installazioni." },
+    { name: "QR Codes", url: "https://liveqr.codes", en: "Generates static and dynamic QR codes with editable destinations and scan analytics.", it: "Genera QR code statici e dinamici con destinazione modificabile e analytics sulle scansioni." },
+    { name: "MEGG Advisory", url: "https://meggadvisory.it", en: "Website for an Italian management consulting firm serving businesses and public administrations.", it: "Sito di uno studio italiano di consulenza direzionale per imprese e pubbliche amministrazioni." },
+    { name: "Vinyl Vault", url: "https://vinyl-vault.net", en: "Scan, catalog and organise a vinyl record collection with metadata pulled from Discogs.", it: "Scansiona, cataloga e organizza la tua collezione di vinili con i metadati da Discogs." },
+    { name: "Invest Your Time", url: "https://investyourtime.net", en: "A to-do list where every task is a stock that soars when you finish it and crashes when you don't.", it: "Una to-do list dove ogni task è un titolo che sale se lo completi e crolla se lo rimandi." },
+    { name: "Zentab", url: "https://zentab.net", en: "An AI financial co-pilot that finds hidden subscriptions and predicts your cash flow.", it: "Un co-pilota finanziario AI che scova abbonamenti nascosti e prevede il tuo cash flow." },
+    { name: "free@b", url: "https://freeatb.it", en: "Shows which Bocconi classrooms and study rooms are free right now.", it: "Mostra quali aule e aule studio Bocconi sono libere in questo momento." },
+    { name: "Orbit Analytics", url: "https://orbitanalytics.app", en: "One cookie-free dashboard showing live visitors and referrers for every website you own.", it: "Un'unica dashboard senza cookie con visitatori e referrer live di tutti i tuoi siti." },
+    { name: "Portfolio", url: "https://michelematozza.com", en: "This personal portfolio collecting my projects, hackathons, talks and experience.", it: "Questo portfolio personale con progetti, hackathon, talk ed esperienze." },
+    { name: "WhatsWrapped", url: "https://whatswrapped.io", en: "Turns an exported WhatsApp chat into a shareable recap, parsed entirely in your browser.", it: "Trasforma una chat WhatsApp esportata in un recap condivisibile, elaborato solo nel browser." },
+    { name: "Pixel Siege", url: "https://pixelsiege.space", en: "A 100,000-square grid where every square you claim gets more expensive each time it changes hands.", it: "Una griglia da 100.000 caselle dove ogni casella rincara a ogni cambio di proprietario." },
+    { name: "Find That Look", url: "https://findthatlook.store", en: "Describe any clothing item and AI finds the nearest physical stores that carry it.", it: "Descrivi un capo e l'AI trova i negozi fisici più vicini che lo vendono." },
+    { name: "Receipt Surgeon", url: "https://receiptsurgeon.com", en: "Upload a receipt and get a professionally worded business-expense justification for tax deductions.", it: "Carica uno scontrino e ottieni una giustificazione professionale della spesa aziendale." },
+    { name: "QuickComic", url: "https://quickcomic.app", en: "Turns a story about your kid into a vintage comic book starring them, in five minutes.", it: "Trasforma una storia sul tuo bambino in un fumetto vintage in cinque minuti." },
+  ];
+
 
   const projects = [
     {
