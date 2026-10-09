@@ -6,6 +6,7 @@ import DOMPurify from "dompurify";
 import { ArrowLeft, Calendar, Clock, Eye } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import profileImage from "@/assets/profile.jpg";
+import { useHideFounderCredit } from "@/lib/blog";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { BLOG_ORIGIN, Post, blogHome, formatDate, readingMinutes } from "@/lib/blog";
 import NotFound from "./NotFound";
