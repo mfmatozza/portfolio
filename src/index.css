@@ -89,3 +89,40 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 }
+
+@layer components {
+  .blog-content { @apply text-sm md:text-[15px] leading-7 text-foreground; }
+  .blog-content > * + * { @apply mt-5; }
+  .blog-content h2 { @apply text-xl md:text-2xl font-bold mt-10; }
+  .blog-content h2::before { content: "## "; @apply text-primary; }
+  .blog-content h3 { @apply text-lg font-semibold mt-8; }
+  .blog-content a { @apply text-primary underline underline-offset-4 decoration-primary/40 hover:decoration-primary; }
+  .blog-content strong { @apply font-bold text-foreground; }
+  .blog-content ul { @apply list-disc pl-6 space-y-1.5; }
+  .blog-content ol { @apply list-decimal pl-6 space-y-1.5; }
+  .blog-content li::marker { @apply text-primary; }
+  .blog-content blockquote { @apply border-l-2 border-primary pl-4 italic text-muted-foreground; }
+  .blog-content code { @apply bg-muted px-1.5 py-0.5 rounded text-[0.9em]; }
+  .blog-content pre { @apply bg-card border border-border rounded-lg p-4 overflow-x-auto; }
+  .blog-content pre code { @apply bg-transparent p-0; }
+  .blog-content img { @apply rounded-lg border border-border w-full; }
+  .blog-content hr { @apply border-border my-10; }
+
+  @keyframes shake { 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+}
+
+/* Blog text effects (outside @layer so they're never purged) */
+  .fx-glow { color: hsl(var(--primary)); text-shadow: 0 0 6px hsl(var(--primary) / 0.8), 0 0 18px hsl(var(--primary) / 0.5); animation: fx-pulse 2.4s ease-in-out infinite; }
+  .fx-gradient { background: linear-gradient(90deg, hsl(var(--primary)), hsl(190 90% 55%), hsl(var(--primary))); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: fx-slide 3s linear infinite; font-weight: 700; }
+  .fx-glitch { position: relative; animation: fx-glitch 1.8s infinite; font-weight: 700; }
+  .fx-marker { background: linear-gradient(transparent 55%, hsl(var(--primary) / 0.35) 55%); padding: 0 2px; }
+  .fx-flicker { color: hsl(var(--primary)); animation: fx-flicker 3s infinite; }
+
+  @keyframes fx-pulse { 50% { text-shadow: 0 0 10px hsl(var(--primary)), 0 0 28px hsl(var(--primary) / 0.7); } }
+  @keyframes fx-slide { to { background-position: 200% center; } }
+  @keyframes fx-glitch {
+    0%, 86%, 100% { text-shadow: none; transform: none; }
+    88% { text-shadow: -2px 0 hsl(0 90% 60%), 2px 0 hsl(190 90% 55%); transform: translateX(1px); }
+    92% { text-shadow: 2px 0 hsl(0 90% 60%), -2px 0 hsl(190 90% 55%); transform: translateX(-1px); }
+  }
+  @keyframes fx-flicker { 0%, 19%, 21%, 23%, 55%, 57%, 100% { opacity: 1; } 20%, 22%, 56% { opacity: 0.3; } }

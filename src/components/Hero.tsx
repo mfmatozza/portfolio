@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, PenLine } from "lucide-react";
+import { blogLink } from "@/lib/blog";
 import profileImage from "@/assets/profile.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -84,6 +85,14 @@ export const Hero = () => {
               >
                 <Github className="w-3.5 h-3.5" />
                 <span>GitHub</span>
+              </a>
+              <a
+                href={blogLink()}
+                className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-xs"
+                aria-label="Blog"
+              >
+                <PenLine className="w-3.5 h-3.5" />
+                <span>Blog</span>
               </a>
             </div>
           </div>
