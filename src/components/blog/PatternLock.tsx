@@ -23,6 +23,11 @@ export const PatternLock = ({
   const [path, setPath] = useState<number[]>([]);
   const [pointer, setPointer] = useState<{ x: number; y: number } | null>(null);
   const drawing = useRef(false);
+  const pathRef = useRef<number[]>([]);
+  const update = (next: number[]) => {
+    pathRef.current = next;
+    setPath(next);
+  };
 
   const toLocal = (e: React.PointerEvent) => {
     const r = svgRef.current!.getBoundingClientRect();
@@ -33,13 +38,13 @@ export const PatternLock = ({
 
   const add = (p: { x: number; y: number }) => {
     const d = hit(p);
-    if (d) setPath((prev) => (prev.includes(d.i) ? prev : [...prev, d.i]));
+    if (d && !pathRef.current.includes(d.i)) update([...pathRef.current, d.i]);
   };
 
   const down = (e: React.PointerEvent) => {
-    (e.target as Element).setPointerCapture?.(e.pointerId);
+    svgRef.current?.setPointerCapture?.(e.pointerId);
     drawing.current = true;
-    setPath([]);
+    update([]);
     const p = toLocal(e);
     setPointer(p);
     add(p);
@@ -54,8 +59,9 @@ export const PatternLock = ({
     if (!drawing.current) return;
     drawing.current = false;
     setPointer(null);
-    if (path.length >= 4) onComplete(path.join("-"));
-    setTimeout(() => setPath([]), 500);
+    const done = pathRef.current;
+    if (done.length >= 4) onComplete(done.join("-"));
+    setTimeout(() => update([]), 500);
   };
 
   const last = path.length ? dots[path[path.length - 1]] : null;
@@ -68,6 +74,7 @@ export const PatternLock = ({
       onPointerDown={down}
       onPointerMove={move}
       onPointerUp={up}
+      onLostPointerCapture={up}
       onPointerCancel={up}
     >
       {path.slice(1).map((d, k) => (
