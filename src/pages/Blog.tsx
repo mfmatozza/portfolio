@@ -6,6 +6,7 @@ import { Calendar, Clock, Eye, ArrowLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import profileImage from "@/assets/profile.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useHideFounderCredit } from "@/lib/blog";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { BLOG_ORIGIN, Post, formatDate, isBlogHost, postPath, readingMinutes } from "@/lib/blog";
 
@@ -50,6 +51,8 @@ export const PostCard = ({ post }: { post: Post }) => {
 };
 
 const Blog = () => {
+  useHideFounderCredit();
+
   const { lang } = useLanguage();
   const { data: posts, isLoading } = useLivePosts();
   const fullText = lang === "it" ? "Senza filtri." : "Unfiltered.";
