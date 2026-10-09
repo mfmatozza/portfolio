@@ -12,7 +12,7 @@ export const Experience = () => {
       company: "VivaTicket",
       position: it ? "Software Engineer Intern" : "Software Engineer Intern",
       location: it ? "Milano, Italia" : "Milan, Italy",
-      period: it ? "2026 - Presente" : "2026 - Present",
+      period: it ? "2026 - Settembre 2026" : "2026 - September 2026",
       bullets: it
         ? [
             "Sviluppo di funzionalità in TypeScript all'interno del team di ingegneria",
