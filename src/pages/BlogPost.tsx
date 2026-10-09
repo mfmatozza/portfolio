@@ -11,6 +11,8 @@ import { BLOG_ORIGIN, Post, blogHome, formatDate, readingMinutes } from "@/lib/b
 import NotFound from "./NotFound";
 
 const BlogPost = () => {
+  useHideFounderCredit();
+
   const { slug = "" } = useParams();
   const { lang } = useLanguage();
 

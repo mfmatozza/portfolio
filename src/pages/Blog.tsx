@@ -50,6 +50,8 @@ export const PostCard = ({ post }: { post: Post }) => {
 };
 
 const Blog = () => {
+  useHideFounderCredit();
+
   const { lang } = useLanguage();
   const { data: posts, isLoading } = useLivePosts();
   const fullText = lang === "it" ? "Senza filtri." : "Unfiltered.";
