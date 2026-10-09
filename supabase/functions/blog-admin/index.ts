@@ -84,8 +84,14 @@ Deno.serve(async (req) => {
       const path = `${crypto.randomUUID()}.${ext}`;
       const { data, error } = await supabase.storage.from("blog-images").createSignedUploadUrl(path);
       if (error) throw error;
-      const { data: pub } = await supabase.storage.from("blog-images").createSignedUrl(path, 60 * 60 * 24 * 365 * 10);
-      return json({ path, token: data.token, url: pub?.signedUrl });
+      return json({ path, token: data.token });
+    }
+
+    if (action === "sign") {
+      const path = z.string().regex(/^[a-z0-9-]+\.[a-z0-9]+$/i).parse(body.path);
+      const { data, error } = await supabase.storage.from("blog-images").createSignedUrl(path, 60 * 60 * 24 * 365 * 10);
+      if (error) throw error;
+      return json({ url: data.signedUrl });
     }
 
     return json({ error: "Unknown action" }, 400);
