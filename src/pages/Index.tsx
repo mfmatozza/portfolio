@@ -14,10 +14,9 @@ const personJsonLd = {
   "@type": "Person",
   name: "Michele Francesco Matozza",
   alternateName: "Michele F. Matozza",
-  jobTitle: "Software Engineer Intern",
+  jobTitle: "Student",
   url: "https://michelematozza.com/",
   email: "mailto:mf.matozza@gmail.com",
-  worksFor: { "@type": "Organization", name: "VivaTicket" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Bocconi University" },
   knowsLanguage: ["en", "it", "fr", "zh"],
   knowsAbout: [
