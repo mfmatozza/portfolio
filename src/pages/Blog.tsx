@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
-import { Calendar, Clock, Eye, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, Eye, ArrowLeft, Bot } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import profileImage from "@/assets/profile.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useHideFounderCredit } from "@/lib/blog";
 import { LanguageToggle } from "@/components/LanguageToggle";
-import { BLOG_ORIGIN, Post, formatDate, isBlogHost, postPath, readingMinutes } from "@/lib/blog";
+import { BLOG_ORIGIN, Post, aiScore, formatDate, isBlogHost, postPath, readingMinutes } from "@/lib/blog";
 
 export const useLivePosts = () =>
   useQuery({
@@ -43,6 +43,12 @@ export const PostCard = ({ post }: { post: Post }) => {
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground pt-2 border-t border-border/60">
           <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{formatDate(post.published_at, lang)}</span>
           <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{readingMinutes(post.content)} min</span>
+          <span
+            className="flex items-center gap-1"
+            title={lang === "it" ? "Quanto sembra scritto da un'AI (per scherzo)" : "How AI-written this looks (just for fun)"}
+          >
+            <Bot className="w-3 h-3" />{aiScore(post.content)}%
+          </span>
           <span className="flex items-center gap-1 ml-auto"><Eye className="w-3 h-3" />{post.view_count}</span>
         </div>
       </div>
