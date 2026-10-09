@@ -21,6 +21,19 @@ export const blogHome = () => (isBlogHost() ? "/" : "/blog");
 export const postPath = (slug: string) => (isBlogHost() ? `/${slug}` : `/blog/${slug}`);
 export const BLOG_ORIGIN = "https://blog.michelematozza.com";
 
+/** Hide the static "founder @" credit while on a blog page (restored on unmount). */
+export function useHideFounderCredit(): void {
+  useEffect(() => {
+    const el = document.getElementById("founder-credit");
+    if (!el) return;
+    const prev = el.style.display;
+    el.style.display = "none";
+    return () => {
+      el.style.display = prev;
+    };
+  }, []);
+}
+
 /** Link used on the portfolio to reach the blog. */
 export const blogLink = () =>
   typeof window !== "undefined" && window.location.hostname.endsWith("michelematozza.com")
