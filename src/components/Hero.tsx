@@ -26,13 +26,13 @@ export const Hero = () => {
 
   const tagline =
     lang === "it"
-      ? "Economia & Informatica @ Bocconi · SWE Intern @ VivaTicket"
-      : "Economics & Computer Science @ Bocconi · SWE Intern @ VivaTicket";
+      ? "Economia & Informatica @ Bocconi · Ex SWE Intern @ VivaTicket"
+      : "Economics & Computer Science @ Bocconi · Ex SWE Intern @ VivaTicket";
 
   const intro =
     lang === "it"
-      ? "Studio Economia e Informatica alla Bocconi e lavoro come Software Engineer Intern in VivaTicket. Sono Presidente di HackLab Bocconi ed ex Lovable Campus Leader: costruisco prodotti agli hackathon, tengo talk su MVP e vibecoding, e trasformo le idee in soluzioni concrete in tempi brevi."
-      : "I study Economics and Computer Science at Bocconi and work as a Software Engineer Intern at VivaTicket. President of HackLab Bocconi and ex Lovable Campus Leader — I build products at hackathons, speak about MVPs and vibecoding, and turn ideas into shipped solutions fast.";
+      ? "Studio Economia e Informatica alla Bocconi e sono stato Software Engineer Intern in VivaTicket. Sono Presidente di HackLab Bocconi ed ex Lovable Campus Leader: costruisco prodotti agli hackathon, tengo talk su MVP e vibecoding, e trasformo le idee in soluzioni concrete in tempi brevi."
+      : "I study Economics and Computer Science at Bocconi and was a Software Engineer Intern at VivaTicket. President of HackLab Bocconi and ex Lovable Campus Leader — I build products at hackathons, speak about MVPs and vibecoding, and turn ideas into shipped solutions fast.";
 
 
   return (
