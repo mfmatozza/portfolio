@@ -47,6 +47,63 @@ export const readingMinutes = (html: string) => {
   return Math.max(1, Math.round(words / 220));
 };
 
+/**
+ * Playful "AI detector" score (0-100). Purely a heuristic for fun:
+ * rewards long uniform sentences, AI-favorite buzzwords and em-dashes;
+ * rewards human tells like slang, contractions, typos-ish short bursts.
+ * Deterministic per post content.
+ */
+export const aiScore = (html: string): number => {
+  const text = html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text) return 0;
+
+  const words = text.split(" ").filter(Boolean);
+  const sentences = text.split(/[.!?]+/).map((s) => s.trim()).filter(Boolean);
+  const lower = text.toLowerCase();
+
+  let score = 35;
+
+  // Uniform, long sentences feel machine-like
+  if (sentences.length > 2) {
+    const lens = sentences.map((s) => s.split(/\s+/).length);
+    const mean = lens.reduce((a, b) => a + b, 0) / lens.length;
+    const variance = lens.reduce((a, b) => a + (b - mean) ** 2, 0) / lens.length;
+    if (mean > 18) score += 12;
+    if (variance < 20) score += 15; // very uniform
+    else if (variance > 120) score -= 10; // chaotic = human
+  }
+
+  // AI-favorite vocabulary
+  const aiWords = [
+    "delve", "landscape", "furthermore", "moreover", "in conclusion",
+    "it's important to note", "game-changer", "game changer", "leverage",
+    "seamless", "cutting-edge", "revolutionize", "unlock", "elevate",
+    "navigate", "realm", "tapestry", " testament", "ever-evolving",
+    "in today's", "ultimately", "additionally", "comprehensive",
+  ];
+  const hits = aiWords.filter((w) => lower.includes(w)).length;
+  score += Math.min(30, hits * 6);
+
+  // Em-dashes and semicolons galore
+  const emDashes = (text.match(/—|–/g) || []).length;
+  score += Math.min(10, emDashes * 2);
+
+  // Human tells: contractions, slang, first-person casual, all-lowercase starts
+  const humanWords = ["lol", "tbh", "imo", "imho", "ngl", "honestly", "stuff", "gonna", "wanna", "kinda", "yeah", "nope", "ahah", "btw"];
+  const humanHits = humanWords.filter((w) => lower.includes(w)).length;
+  score -= Math.min(25, humanHits * 7);
+  const contractions = (lower.match(/\b\w+'\w/g) || []).length;
+  score -= Math.min(10, contractions);
+
+  // Very short posts look more human (less polished)
+  if (words.length < 120) score -= 8;
+
+  return Math.max(2, Math.min(98, Math.round(score)));
+};
+
 export const formatDate = (iso: string | null, lang: "en" | "it" = "en") =>
   iso
     ? new Date(iso).toLocaleDateString(lang === "it" ? "it-IT" : "en-GB", {
