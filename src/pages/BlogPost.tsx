@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
 import { ArrowLeft, Calendar, Check, Clock, Eye, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -18,6 +18,7 @@ const BlogPost = () => {
 
   const { slug = "" } = useParams();
   const { lang } = useLanguage();
+  const queryClient = useQueryClient();
 
   const { data: post, isLoading } = useQuery({
     queryKey: ["post", slug],
