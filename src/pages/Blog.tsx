@@ -116,6 +116,11 @@ const Blog = () => {
                 <p className="fx-glow text-xs mt-3" style={{ animationDelay: "0.15s" }}>
                   {lang === "it" ? "Nessuna frase è stata scritta con l'AI." : "No AI has been used to write any sentence."}
                 </p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  {lang === "it"
+                    ? "La percentuale AI sui post? È il mio modo di controllare quanto sto diventando simile a un'AI."
+                    : "The AI detector % on each post? That's just me checking how much I'm becoming like an AI."}
+                </p>
               </div>
               <img src={profileImage} alt="Michele F. Matozza" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-border flex-shrink-0" />
             </div>
