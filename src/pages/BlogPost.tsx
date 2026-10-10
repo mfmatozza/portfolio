@@ -45,6 +45,21 @@ const BlogPost = () => {
   if (!post) return <NotFound />;
 
   const url = `${BLOG_ORIGIN}/${post.slug}`;
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: post.title, text: post.excerpt || post.title, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+      }
+      setShared(true);
+      setTimeout(() => setShared(false), 2000);
+    } catch {
+      /* user dismissed the share sheet */
+    }
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
