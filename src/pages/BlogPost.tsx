@@ -34,8 +34,11 @@ const BlogPost = () => {
     const key = `viewed:${post.slug}`;
     if (sessionStorage.getItem(key)) return;
     sessionStorage.setItem(key, "1");
-    supabase.rpc("increment_post_view", { _slug: post.slug });
-  }, [post]);
+    supabase.rpc("increment_post_view", { _slug: post.slug }).then(() => {
+      queryClient.invalidateQueries({ queryKey: ["post", post.slug] });
+      queryClient.invalidateQueries({ queryKey: ["posts"] });
+    });
+  }, [post, queryClient]);
 
   const html = useMemo(
     () => (post ? DOMPurify.sanitize(post.content, { ADD_ATTR: ["target", "data-effect"] }) : ""),
