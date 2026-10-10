@@ -113,6 +113,9 @@ const Blog = () => {
                 </div>
                 <p className="text-xs text-primary mb-3">{lang === "it" ? "Tech · AI · Startup — pensieri di Michele" : "Tech · AI · Startups — thoughts by Michele"}</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">{intro}</p>
+                <p className="fx-glow text-xs mt-3" style={{ animationDelay: "0.15s" }}>
+                  {lang === "it" ? "Nessuna frase è stata scritta con l'AI." : "No AI has been used to write any sentence."}
+                </p>
               </div>
               <img src={profileImage} alt="Michele F. Matozza" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-border flex-shrink-0" />
             </div>
