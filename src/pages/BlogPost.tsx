@@ -1,9 +1,9 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
-import { ArrowLeft, Calendar, Clock, Eye } from "lucide-react";
+import { ArrowLeft, Calendar, Check, Clock, Eye, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import profileImage from "@/assets/profile.jpg";
 import { useHideFounderCredit } from "@/lib/blog";
@@ -13,6 +13,8 @@ import NotFound from "./NotFound";
 
 const BlogPost = () => {
   useHideFounderCredit();
+
+  const [shared, setShared] = useState(false);
 
   const { slug = "" } = useParams();
   const { lang } = useLanguage();
@@ -43,6 +45,21 @@ const BlogPost = () => {
   if (!post) return <NotFound />;
 
   const url = `${BLOG_ORIGIN}/${post.slug}`;
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: post.title, text: post.excerpt || post.title, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+      }
+      setShared(true);
+      setTimeout(() => setShared(false), 2000);
+    } catch {
+      /* user dismissed the share sheet */
+    }
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -89,6 +106,14 @@ const BlogPost = () => {
             <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{formatDate(post.published_at, lang)}</span>
             <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{readingMinutes(post.content)} min</span>
             <span className="flex items-center gap-1"><Eye className="w-3 h-3" />{post.view_count}</span>
+            <button
+              onClick={handleShare}
+              title={lang === "it" ? "Condividi" : "Share"}
+              className="ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded border border-border text-xs text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+            >
+              {shared ? <Check className="w-3 h-3 text-primary" /> : <Share2 className="w-3 h-3" />}
+              {shared ? (lang === "it" ? "copiato" : "copied") : lang === "it" ? "condividi" : "share"}
+            </button>
           </div>
           {post.cover_url && (
             <img src={post.cover_url} alt={post.title} className="w-full aspect-[16/9] object-cover rounded-lg border border-border mb-10" />
