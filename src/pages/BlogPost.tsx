@@ -1,9 +1,9 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
 import DOMPurify from "dompurify";
-import { ArrowLeft, Calendar, Clock, Eye } from "lucide-react";
+import { ArrowLeft, Calendar, Check, Clock, Eye, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import profileImage from "@/assets/profile.jpg";
 import { useHideFounderCredit } from "@/lib/blog";
@@ -13,6 +13,8 @@ import NotFound from "./NotFound";
 
 const BlogPost = () => {
   useHideFounderCredit();
+
+  const [shared, setShared] = useState(false);
 
   const { slug = "" } = useParams();
   const { lang } = useLanguage();
