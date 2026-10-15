@@ -16,6 +16,7 @@ export type Database = {
     Tables: {
       posts: {
         Row: {
+          ai_score: number | null
           content: string
           cover_url: string | null
           created_at: string
@@ -29,6 +30,7 @@ export type Database = {
           view_count: number
         }
         Insert: {
+          ai_score?: number | null
           content?: string
           cover_url?: string | null
           created_at?: string
@@ -42,6 +44,7 @@ export type Database = {
           view_count?: number
         }
         Update: {
+          ai_score?: number | null
           content?: string
           cover_url?: string | null
           created_at?: string

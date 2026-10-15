@@ -36,6 +36,7 @@ const PostSchema = z.object({
   content: z.string().max(500000),
   status: z.enum(["draft", "published"]),
   published_at: z.string().nullable().optional(),
+  ai_score: z.number().int().min(0).max(100).nullable().optional(),
 });
 
 Deno.serve(async (req) => {
