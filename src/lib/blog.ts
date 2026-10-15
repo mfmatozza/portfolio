@@ -11,6 +11,7 @@ export type Post = {
   status: string;
   published_at: string | null;
   view_count: number;
+  ai_score?: number | null;
   created_at: string;
   updated_at: string;
 };

@@ -1,0 +1,1 @@
+ALTER TABLE public.posts ADD COLUMN ai_score integer CHECK (ai_score BETWEEN 0 AND 100);

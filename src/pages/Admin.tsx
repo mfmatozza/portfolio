@@ -87,6 +87,7 @@ const Admin = () => {
           content: draft.content,
           status,
           published_at,
+          ai_score: draft.ai_score ?? null,
         },
       });
       setDraft(post);
@@ -186,6 +187,12 @@ const Admin = () => {
           </div>
           <textarea className={cn(input, "min-h-[70px]")} maxLength={300} placeholder="Short excerpt shown on the card and in link previews" value={draft.excerpt}
             onChange={(e) => setDraft((d) => ({ ...d, excerpt: e.target.value }))} />
+          <input className={input} type="number" min={0} max={100} placeholder="GPTZero AI % (0-100, leave empty to hide)"
+            value={draft.ai_score ?? ""}
+            onChange={(e) => {
+              const v = e.target.value;
+              setDraft((d) => ({ ...d, ai_score: v === "" ? null : Math.max(0, Math.min(100, Math.round(Number(v)))) }));
+            }} />
 
           <label className="block cursor-pointer">
             <div className="aspect-[16/6] rounded-lg border border-dashed border-border overflow-hidden flex items-center justify-center bg-card hover:border-primary">
