@@ -96,7 +96,7 @@ export const BlogEditor = ({ value, onChange }: { value: string; onChange: (html
   const editor = useEditor({
     extensions: [
       StarterKit.configure({ heading: { levels: [2, 3] }, link: false } as any),
-      Link.configure({ openOnClick: false, autolink: true, HTMLAttributes: { target: "_blank", rel: "noopener" } }),
+      Link.configure({ openOnClick: false, autolink: true, HTMLAttributes: { target: "_blank", rel: "dofollow" } }),
       Image,
       EffectMark,
     ],

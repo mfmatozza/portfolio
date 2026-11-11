@@ -1,3 +1,5 @@
+import { useEffect as __uE } from "react";
+import { useLocation as __uL } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FloatingNav } from "@/components/FloatingNav";
 import { Hero } from "@/components/Hero";
@@ -35,6 +37,12 @@ const personJsonLd = {
 
 
 const Index = () => {
+  const __loc = __uL();
+  __uE(() => {
+    if (!__loc.hash) return;
+    const t = setTimeout(() => document.getElementById(__loc.hash.slice(1))?.scrollIntoView(), 50);
+    return () => clearTimeout(t);
+  }, [__loc.hash]);
   return (
     <div className="min-h-screen">
       <Helmet>

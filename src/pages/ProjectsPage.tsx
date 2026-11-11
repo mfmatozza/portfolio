@@ -18,7 +18,7 @@ const ProjectsPage = () => {
         <link rel="canonical" href="https://michelematozza.com/projects" />
       </Helmet>
       <div className="max-w-3xl mx-auto px-6 pt-10 flex items-center justify-between">
-        <Link to="/" className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1.5">
+        <Link to="/#products" className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1.5">
           <ArrowLeft className="w-3.5 h-3.5" /> {lang === "it" ? "Torna alla home" : "Back home"}
         </Link>
         <LanguageToggle />
