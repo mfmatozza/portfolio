@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export const Projects = () => {
   const { lang } = useLanguage();
   const it = lang === "it";
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
 
   const allSites = [
     { name: "MagicDomain", url: "https://magicdoma.in", en: "Turns any word or idea into clever domain hacks, checked for availability in seconds.", it: "Trasforma parole e idee in domini creativi, verificandone la disponibilità in pochi secondi." },
