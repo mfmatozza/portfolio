@@ -12,13 +12,12 @@ const ExtracurricularIcon = () => (
 
 const navItems = [
   { id: "home", icon: Home, label: { en: "Home", it: "Home" } },
-  { id: "education", icon: BookOpen, label: { en: "Education", it: "Istruzione" } },
+  { id: "products", icon: Code, label: { en: "Products", it: "Prodotti" } },
+  { id: "hackathons", icon: Swords, label: { en: "Results", it: "Risultati" } },
+  { id: "talks", icon: Mic, label: { en: "Speaking & Writing", it: "Talk e Scrittura" } },
   { id: "experience", icon: Briefcase, label: { en: "Experience", it: "Esperienza" } },
   { id: "extracurricular", icon: ExtracurricularIcon, label: { en: "Extracurricular", it: "Attività Extra" } },
-  { id: "projects", icon: Code, label: { en: "Projects", it: "Progetti" } },
-  { id: "hackathons", icon: Swords, label: { en: "Hackathons", it: "Hackathon" } },
-  { id: "talks", icon: Mic, label: { en: "Talks", it: "Talk" } },
-
+  { id: "education", icon: BookOpen, label: { en: "Education", it: "Istruzione" } },
 ];
 
 export const FloatingNav = () => {

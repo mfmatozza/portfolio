@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Admin from "./pages/Admin";
+import ProjectsPage from "./pages/ProjectsPage";
 import { isBlogHost } from "@/lib/blog";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
@@ -30,6 +31,7 @@ const App = () => (
             ) : (
               <>
                 <Route path="/" element={<Index />} />
+                <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/admin" element={<Admin />} />
