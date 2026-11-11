@@ -69,7 +69,7 @@ export const Hero = () => {
               <a
                 href="https://www.linkedin.com/in/michele-francesco-matozza-17964b266"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="dofollow"
                 className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-xs"
                 aria-label="LinkedIn"
               >
@@ -79,7 +79,7 @@ export const Hero = () => {
               <a
                 href="https://github.com/mfmatozza"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="dofollow"
                 className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-xs"
                 aria-label="GitHub"
               >

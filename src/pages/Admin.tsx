@@ -171,7 +171,7 @@ const Admin = () => {
             <span className="text-muted-foreground">status:</span>
             <span className="uppercase text-primary">{state}</span>
             {state === "live" && (
-              <a href={postPath(draft.slug)} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-muted-foreground hover:text-primary">
+              <a href={postPath(draft.slug)} target="_blank" rel="dofollow" className="flex items-center gap-1 text-muted-foreground hover:text-primary">
                 view <ExternalLink className="w-3 h-3" />
               </a>
             )}

@@ -193,7 +193,7 @@ export const Projects = () => {
                     <a
                       href={project.links.linkedin}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="dofollow"
                       className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Linkedin className="w-3.5 h-3.5" />
@@ -204,7 +204,7 @@ export const Projects = () => {
                     <a
                       href={project.links.github}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="dofollow"
                       className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Github className="w-3.5 h-3.5" />
@@ -215,7 +215,7 @@ export const Projects = () => {
                     <a
                       href={project.links.devpost}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="dofollow"
                       className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Trophy className="w-3.5 h-3.5" />
@@ -226,7 +226,7 @@ export const Projects = () => {
                     <a
                       href={project.links.chrome}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="dofollow"
                       className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Chrome className="w-3.5 h-3.5" />

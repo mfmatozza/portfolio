@@ -72,7 +72,7 @@ export const Publications = () => {
                 <a
                   href={publication.pdf}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="dofollow"
                   className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
                 >
                   <FileText className="w-3.5 h-3.5" />

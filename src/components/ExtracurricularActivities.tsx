@@ -117,7 +117,7 @@ export const ExtracurricularActivities = () => {
                             key={linkIndex}
                             href={link.url}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="dofollow"
                             className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
                           >
                             <ExternalLink className="w-3 h-3" />
