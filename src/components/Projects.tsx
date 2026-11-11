@@ -99,30 +99,6 @@ export const Projects = () => {
         linkedin: "https://www.linkedin.com/company/unimarket-it/",
       },
     },
-    {
-      title: it ? "Campionamento MCMC per un Modello di Ising 2D" : "MCMC Sampling for a 2D Ising Model",
-      role: it ? "Sviluppatore" : "Developer",
-      period: it ? "Novembre 2025" : "November 2025",
-      description: it
-        ? "Implementazione di un campionatore Markov Chain Monte Carlo per il modello di Ising 2D, con ottimizzazione dell'algoritmo di Metropolis, rilevamento di cluster tramite BFS e analisi delle transizioni di fase alla temperatura critica."
-        : "Implementation of a Markov Chain Monte Carlo sampler for the 2D Ising model, featuring Metropolis algorithm optimization, cluster detection via BFS, and analysis of phase transitions at critical temperature.",
-      tags: it ? ["Python", "MCMC", "Fisica Computazionale"] : ["Python", "MCMC", "Computational Physics"],
-      links: { pdf: "/documents/mcmc-ising-model.pdf" },
-      collaborator: { name: "Luca Pirini", url: "https://piriniluca.com", label: "HM" },
-      dofollow: true,
-    },
-    {
-      title: it
-        ? "Breve Panoramica dei Sistemi di Crittografia a Chiave Pubblica"
-        : "Brief Overview of Public-Key Encryption Systems",
-      role: it ? "Autore" : "Author",
-      period: it ? "Giugno 2024" : "June 2024",
-      description: it
-        ? "Saggio che esplora RSA e la Crittografia su Curve Ellittiche, analizzandone i fondamenti matematici, le vulnerabilità incluse le minacce del calcolo quantistico, e i vantaggi comparativi in termini di sicurezza."
-        : "Essay exploring RSA and Elliptic Curve Cryptography, analyzing their mathematical foundations, vulnerabilities including quantum computing threats, and comparative security advantages.",
-      tags: it ? ["Crittografia", "RSA", "ECC", "Matematica"] : ["Cryptography", "RSA", "ECC", "Mathematics"],
-      links: { pdf: "/documents/public-key-encryption.pdf" },
-    },
   ];
 
   const labels = {
