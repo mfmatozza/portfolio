@@ -1,4 +1,5 @@
-import { Mic } from "lucide-react";
+import { Mic, PenLine, ArrowRight } from "lucide-react";
+import { BLOG_ORIGIN } from "@/lib/blog";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Talks = () => {
@@ -33,7 +34,7 @@ export const Talks = () => {
   return (
     <section id="talks" className="flex items-center justify-center px-6 py-16">
       <div className="max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-10">{it ? "Talk & Speaking" : "Talks & Speaking"}</h2>
+        <h2 className="text-2xl font-bold mb-10">{it ? "Talk e Scrittura" : "Speaking & Writing"}</h2>
         <div className="space-y-8">
           {talks.map((talk, index) => (
             <div
@@ -58,6 +59,21 @@ export const Talks = () => {
             </div>
           ))}
         </div>
+        <a
+          href={BLOG_ORIGIN}
+          className="mt-10 flex items-center justify-between gap-3 px-4 py-3 rounded-lg border border-border bg-card text-sm hover:border-primary/50 transition-colors group"
+        >
+          <span className="flex items-center gap-3">
+            <PenLine className="w-4 h-4 text-primary" />
+            <span>
+              <span className="font-bold">Blog</span>
+              <span className="text-xs text-muted-foreground ml-2">
+                {it ? "Cosa penso di tech e AI, senza filtri." : "What I think about tech & AI, unfiltered."}
+              </span>
+            </span>
+          </span>
+          <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-0.5 transition-transform" />
+        </a>
       </div>
     </section>
   );
