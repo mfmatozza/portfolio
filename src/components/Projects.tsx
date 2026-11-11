@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Linkedin, FileText, Github, Trophy, Chrome, ChevronDown } from "lucide-react";
+import { ExternalLink, Linkedin, Github, Trophy, Chrome, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Projects = () => {
@@ -99,36 +99,11 @@ export const Projects = () => {
         linkedin: "https://www.linkedin.com/company/unimarket-it/",
       },
     },
-    {
-      title: it ? "Campionamento MCMC per un Modello di Ising 2D" : "MCMC Sampling for a 2D Ising Model",
-      role: it ? "Sviluppatore" : "Developer",
-      period: it ? "Novembre 2025" : "November 2025",
-      description: it
-        ? "Implementazione di un campionatore Markov Chain Monte Carlo per il modello di Ising 2D, con ottimizzazione dell'algoritmo di Metropolis, rilevamento di cluster tramite BFS e analisi delle transizioni di fase alla temperatura critica."
-        : "Implementation of a Markov Chain Monte Carlo sampler for the 2D Ising model, featuring Metropolis algorithm optimization, cluster detection via BFS, and analysis of phase transitions at critical temperature.",
-      tags: it ? ["Python", "MCMC", "Fisica Computazionale"] : ["Python", "MCMC", "Computational Physics"],
-      links: { pdf: "/documents/mcmc-ising-model.pdf" },
-      collaborator: { name: "Luca Pirini", url: "https://piriniluca.com", label: "HM" },
-      dofollow: true,
-    },
-    {
-      title: it
-        ? "Breve Panoramica dei Sistemi di Crittografia a Chiave Pubblica"
-        : "Brief Overview of Public-Key Encryption Systems",
-      role: it ? "Autore" : "Author",
-      period: it ? "Giugno 2024" : "June 2024",
-      description: it
-        ? "Saggio che esplora RSA e la Crittografia su Curve Ellittiche, analizzandone i fondamenti matematici, le vulnerabilità incluse le minacce del calcolo quantistico, e i vantaggi comparativi in termini di sicurezza."
-        : "Essay exploring RSA and Elliptic Curve Cryptography, analyzing their mathematical foundations, vulnerabilities including quantum computing threats, and comparative security advantages.",
-      tags: it ? ["Crittografia", "RSA", "ECC", "Matematica"] : ["Cryptography", "RSA", "ECC", "Mathematics"],
-      links: { pdf: "/documents/public-key-encryption.pdf" },
-    },
   ];
 
   const labels = {
     website: it ? "Sito Web" : "Website",
     linkedin: "LinkedIn",
-    pdf: it ? "Vedi PDF" : "View PDF",
     github: "GitHub",
     devpost: "DevPost",
     chrome: it ? "Chrome Store" : "Chrome Store",
@@ -190,7 +165,7 @@ export const Projects = () => {
               </div>
               {"collaborator" in project && project.collaborator && (
                 <p className="text-xs text-muted-foreground mb-3">
-                  {project.collaborator.label ? `${project.collaborator.label}: ` : labels.developedWith}
+                  {labels.developedWith}
                   <a
                     href={project.collaborator.url}
                     target="_blank"
@@ -223,17 +198,6 @@ export const Projects = () => {
                     >
                       <Linkedin className="w-3.5 h-3.5" />
                       <span>{labels.linkedin}</span>
-                    </a>
-                  )}
-                  {"pdf" in project.links && project.links.pdf && (
-                    <a
-                      href={project.links.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <FileText className="w-3.5 h-3.5" />
-                      <span>{labels.pdf}</span>
                     </a>
                   )}
                   {"github" in project.links && project.links.github && (

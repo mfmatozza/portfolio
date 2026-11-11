@@ -7,6 +7,7 @@ import { ExtracurricularActivities } from "@/components/ExtracurricularActivitie
 import { SelectedProducts } from "@/components/SelectedProducts";
 import { Hackathons } from "@/components/Hackathons";
 import { Talks } from "@/components/Talks";
+import { Publications } from "@/components/Publications";
 import { Footer } from "@/components/Footer";
 
 const personJsonLd = {
@@ -51,6 +52,7 @@ const Index = () => {
         <SelectedProducts />
         <Hackathons />
         <Talks />
+        <Publications />
         <Experience />
         <ExtracurricularActivities />
         <Education />
