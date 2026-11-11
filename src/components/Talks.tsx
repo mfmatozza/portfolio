@@ -33,7 +33,7 @@ export const Talks = () => {
   return (
     <section id="talks" className="flex items-center justify-center px-6 py-16">
       <div className="max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-10">{it ? "Talk & Speaking" : "Talks & Speaking"}</h2>
+        <h2 className="text-2xl font-bold mb-10">{it ? "Talk e Scrittura" : "Speaking & Writing"}</h2>
         <div className="space-y-8">
           {talks.map((talk, index) => (
             <div

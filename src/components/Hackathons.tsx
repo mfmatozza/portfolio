@@ -92,7 +92,7 @@ export const Hackathons = () => {
   return (
     <section id="hackathons" className="flex items-center justify-center px-6 py-16">
       <div className="max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-10">{it ? "Hackathon Recenti" : "Recent Hackathons"}</h2>
+        <h2 className="text-2xl font-bold mb-10">{it ? "Risultati e Riconoscimenti" : "Results & Recognition"}</h2>
         <div className="space-y-6">
           {hackathons.map((hackathon, index) => (
             <div key={index} className="bg-card border border-border rounded-xl p-5 animate-fade-in">
