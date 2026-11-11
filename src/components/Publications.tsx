@@ -54,19 +54,6 @@ export const Publications = () => {
                   </span>
                 ))}
               </div>
-              {publication.collaborator && (
-                <p className="text-xs text-muted-foreground mb-3">
-                  HM:{" "}
-                  <a
-                    href={publication.collaborator.url}
-                    target="_blank"
-                    rel="dofollow"
-                    className="text-primary hover:underline"
-                  >
-                    {publication.collaborator.name}
-                  </a>
-                </p>
-              )}
               <div className="mt-auto pt-2 border-t border-border">
                 <a
                   href={publication.pdf}
