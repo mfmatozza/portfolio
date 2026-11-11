@@ -15,7 +15,6 @@ export const Publications = () => {
         : "Implementation of a Markov Chain Monte Carlo sampler for the 2D Ising model, featuring Metropolis algorithm optimization, cluster detection via BFS, and analysis of phase transitions at critical temperature.",
       tags: it ? ["Python", "MCMC", "Fisica Computazionale"] : ["Python", "MCMC", "Computational Physics"],
       pdf: "/documents/mcmc-ising-model.pdf",
-      collaborator: { name: "Luca Pirini", url: "https://piriniluca.com" },
     },
     {
       title: it
@@ -55,19 +54,6 @@ export const Publications = () => {
                   </span>
                 ))}
               </div>
-              {publication.collaborator && (
-                <p className="text-xs text-muted-foreground mb-3">
-                  HM:{" "}
-                  <a
-                    href={publication.collaborator.url}
-                    target="_blank"
-                    rel="dofollow"
-                    className="text-primary hover:underline"
-                  >
-                    {publication.collaborator.name}
-                  </a>
-                </p>
-              )}
               <div className="mt-auto pt-2 border-t border-border">
                 <a
                   href={publication.pdf}
