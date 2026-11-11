@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Linkedin, FileText, Github, Trophy, Chrome, ChevronDown } from "lucide-react";
+import { ExternalLink, Linkedin, Github, Trophy, Chrome, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Projects = () => {
@@ -104,7 +104,6 @@ export const Projects = () => {
   const labels = {
     website: it ? "Sito Web" : "Website",
     linkedin: "LinkedIn",
-    pdf: it ? "Vedi PDF" : "View PDF",
     github: "GitHub",
     devpost: "DevPost",
     chrome: it ? "Chrome Store" : "Chrome Store",
@@ -166,7 +165,7 @@ export const Projects = () => {
               </div>
               {"collaborator" in project && project.collaborator && (
                 <p className="text-xs text-muted-foreground mb-3">
-                  {project.collaborator.label ? `${project.collaborator.label}: ` : labels.developedWith}
+                  {labels.developedWith}
                   <a
                     href={project.collaborator.url}
                     target="_blank"
@@ -199,17 +198,6 @@ export const Projects = () => {
                     >
                       <Linkedin className="w-3.5 h-3.5" />
                       <span>{labels.linkedin}</span>
-                    </a>
-                  )}
-                  {"pdf" in project.links && project.links.pdf && (
-                    <a
-                      href={project.links.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <FileText className="w-3.5 h-3.5" />
-                      <span>{labels.pdf}</span>
                     </a>
                   )}
                   {"github" in project.links && project.links.github && (
