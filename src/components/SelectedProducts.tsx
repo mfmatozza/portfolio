@@ -75,11 +75,11 @@ export const SelectedProducts = () => {
                 <p className="text-xs text-muted-foreground leading-relaxed">{p.purpose}</p>
                 <dl className="text-xs space-y-1 mt-auto">
                   <div className="flex gap-2">
-                    <dt className="text-primary">▸ {it ? "Ruolo:" : "Role:"}</dt>
+                    <dt className="text-primary whitespace-nowrap shrink-0">▸ {it ? "Ruolo:" : "Role:"}</dt>
                     <dd className="text-muted-foreground">{it ? "Fondatore & sviluppatore" : "Founder & developer"}</dd>
                   </div>
                   <div className="flex gap-2">
-                    <dt className="text-primary">▸ {it ? "Risultato:" : "Outcome:"}</dt>
+                    <dt className="text-primary whitespace-nowrap shrink-0">▸ {it ? "Risultato:" : "Outcome:"}</dt>
                     <dd className="text-foreground font-medium">{p.outcome}</dd>
                   </div>
                 </dl>
