@@ -52,6 +52,7 @@ const Index = () => {
         <SelectedProducts />
         <Hackathons />
         <Talks />
+        <Publications />
         <Experience />
         <ExtracurricularActivities />
         <Education />
