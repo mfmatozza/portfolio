@@ -169,7 +169,7 @@ export const Projects = () => {
                   <a
                     href={project.collaborator.url}
                     target="_blank"
-                    rel={"dofollow" in project && project.dofollow ? "dofollow" : "noopener noreferrer"}
+                    rel="dofollow"
                     className="text-primary hover:underline"
                   >
                     {project.collaborator.name}
@@ -182,7 +182,7 @@ export const Projects = () => {
                     <a
                       href={project.links.website}
                       target="_blank"
-                      rel={"dofollow" in project && project.dofollow ? "dofollow" : "noopener noreferrer"}
+                      rel="dofollow"
                       className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
